@@ -36,7 +36,8 @@ def regroupOnName(series):
 			output[seriesValue][1] = output[seriesValue][1] + ' & ' + row[1]
 			output[seriesValue][2] = output[seriesValue][2] + ' & ' + row[2]
 			output[seriesValue][3] = output[seriesValue][3] + ' & ' + row[3]
-			output[seriesValue][4] = output[seriesValue][4] + row[4]
+			output[seriesValue][4] = output[seriesValue][4] + ' & ' + row[4]
+			output[seriesValue][5] = output[seriesValue][5] + row[5]
 		else:
 			output[seriesValue] = row
 
@@ -54,39 +55,40 @@ with open(packageFile) as json_file:
 output = {};
 
 for package in packages:
-	if package['metadata_created']<'2022-01-01':
-		taglist = []
-		for tag in package['tags']:
-			taglist.append(tag['display_name'])
-		taglist = sorted(taglist)
-		hashInput = package['organization']['title'] + ''.join(taglist)
-		hashValue = hash(hashInput)
-		batch = ''
-		try:
-			batch = package['batch']
-		except:
-			print('No batch')
-		if hashValue in output:
-			output[hashValue]['titles'].append(package['title'])
-			output[hashValue]['batch'].append(batch)
-		else:
-			output[hashValue] = {'titles':[package['title']],'org':package['organization']['title'],'tags':taglist,'batch':[batch]}
+	#if package['metadata_created']<'2022-01-01':
+	taglist = []
+	for tag in package['tags']:
+		taglist.append(tag['display_name'])
+	taglist = sorted(taglist)
+	hashInput = package['organization']['title'] + ''.join(taglist)
+	hashValue = hash(hashInput)
+	batch = ''
+	try:
+		batch = package['batch']
+	except:
+		print('No batch')
+	if hashValue in output:
+		output[hashValue]['titles'].append(package['title'])
+		output[hashValue]['batch'].append(batch)
+		output[hashValue]['IDs'].append(package['id'])
+	else:
+		output[hashValue] = {'titles':[package['title']],'org':package['organization']['title'],'tags':taglist,'batch':[batch],'IDs':[package['id']]}
 
 count = 0
 csvOutput = []
 for key in output:
 	series = output[key]
-	if len(series['titles'])>2 and len(series['tags'])>0:
+	if len(series['titles'])>3 and len(series['tags'])>0:
 		print(series)
 		count = count+1
 		#name = Levenshtein.quickmedian(series['titles'])
 		#print(name)
 		name = substringCounter(series['titles'])
 		print(name)
-		csvOutput.append([name,series['org'],'|'.join(series['tags']),'|'.join(series['batch']),len(series['titles'])] + series['titles'])
+		csvOutput.append([name,series['org'],'|'.join(series['tags']),'|'.join(series['batch']),'|'.join(series['IDs']),len(series['titles'])] + series['titles'])
 
 csvOutput = regroupOnName(csvOutput)
 
-with open("series_january.csv", "w", newline="") as f:
+with open("series_september.csv", "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerows(csvOutput)

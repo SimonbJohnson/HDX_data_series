@@ -20,10 +20,10 @@ output = []
 loops = 20
 j=0
 for i in range(0, loops):
-    print i
+    print(i)
     result = find_datasets(1000*i, 1000)
     packages = result["results"]
-    print packages
+    print(packages)
     output  = output + packages
 with open('hdxMetaDataScrape.json', 'w') as file:
     json.dump(output, file)
