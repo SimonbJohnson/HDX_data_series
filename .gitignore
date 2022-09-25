@@ -1,0 +1,5 @@
+
+*.DS_Store
+dataseries/*
+*.pyc
+hdxMetaDataScrape.json
