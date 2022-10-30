@@ -36,8 +36,9 @@ def regroupOnName(series):
 			output[seriesValue][1] = output[seriesValue][1] + ' & ' + row[1]
 			output[seriesValue][2] = output[seriesValue][2] + ' & ' + row[2]
 			output[seriesValue][3] = output[seriesValue][3] + ' & ' + row[3]
-			output[seriesValue][4] = output[seriesValue][4] + ' & ' + row[4]
+			output[seriesValue][4] = output[seriesValue][4] + '|' + row[4]
 			output[seriesValue][5] = output[seriesValue][5] + row[5]
+			#needs to combine series names
 		else:
 			output[seriesValue] = row
 
@@ -54,6 +55,8 @@ with open(packageFile) as json_file:
 
 output = {};
 
+
+#group data series based on same tags from the same organisation
 for package in packages:
 	#if package['metadata_created']<'2022-01-01':
 	taglist = []
@@ -74,11 +77,13 @@ for package in packages:
 	else:
 		output[hashValue] = {'titles':[package['title']],'org':package['organization']['title'],'tags':taglist,'batch':[batch],'IDs':[package['id']]}
 
+
 count = 0
 csvOutput = []
 for key in output:
 	series = output[key]
-	if len(series['titles'])>3 and len(series['tags'])>0:
+	#need to add an exception for CODs
+	if len(series['titles'])>4 and len(series['tags'])>0:
 		print(series)
 		count = count+1
 		#name = Levenshtein.quickmedian(series['titles'])
@@ -89,6 +94,10 @@ for key in output:
 
 csvOutput = regroupOnName(csvOutput)
 
-with open("series_september.csv", "w", newline="") as f:
+with open("series_october.csv", "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerows(csvOutput)
+
+
+#create JSON output
+

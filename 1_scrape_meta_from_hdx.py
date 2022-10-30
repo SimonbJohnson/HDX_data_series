@@ -25,5 +25,5 @@ for i in range(0, loops):
     packages = result["results"]
     print(packages)
     output  = output + packages
-with open('hdxMetaDataScrape.json', 'w') as file:
+with open('hdxMetaDataScrape.json_oct', 'w') as file:
     json.dump(output, file)
