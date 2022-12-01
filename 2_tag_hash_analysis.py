@@ -47,7 +47,7 @@ def regroupOnName(series):
 		outputseries.append(output[key])
 	return outputseries
 
-packageFile = 'hdxMetaDataScrape.json'
+packageFile = 'working files/hdxMetaDataScrape_oct.json'
 
 print('Loading file')
 with open(packageFile) as json_file:
@@ -92,12 +92,21 @@ for key in output:
 		print(name)
 		csvOutput.append([name,series['org'],'|'.join(series['tags']),'|'.join(series['batch']),'|'.join(series['IDs']),len(series['titles'])] + series['titles'])
 
+#make this work on the JSON structure for easy combintion of name data series
 csvOutput = regroupOnName(csvOutput)
 
 with open("series_october.csv", "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerows(csvOutput)
 
-
+JSONOutput = []
 #create JSON output
+for key in list(output):
+	series = output[key]
+	if (len(series['titles'])>4 and len(series['tags'])>0) or 'common operational dataset - cod' in series['tags']:
+		JSONOutput.append(series)
 
+
+#ignore names field as incorrect
+with open('data_series_october_first_output.json', 'w', encoding='utf-8') as f:
+	json.dump(JSONOutput, f, ensure_ascii=False, indent=4)

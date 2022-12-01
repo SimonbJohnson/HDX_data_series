@@ -54702,7 +54702,7 @@
         },
         {
             "id": 100,
-            "series": "WFP - ICA Malnutrition",
+            "series": "WFP - World Food Programme - Prevalence of Malnutrition, Stunting",
             "row": 100,
             "datasets": [
                 {
@@ -55154,9 +55154,13 @@
         },
         {
             "id": 104,
-            "series": "WFP - ICA Flood Risk",
+            "series": "WFP - Flood Risk",
             "row": 104,
             "datasets": [
+                {
+                    "id": "71a3da4e-6d0a-41ff-b1be-658818d269e3",
+                    "name": "Cambodia: Flood Extent"
+                },
                 {
                     "id": "1817ad3f-5a17-4f85-b098-ec742589d0dd",
                     "name": "ICA Philippines - Flood Risk"
@@ -55184,6 +55188,10 @@
                 {
                     "id": "35949311-0175-495e-9f69-9183459f84a0",
                     "name": "ICA Lesotho - Flood Risk"
+                },
+                {
+                    "id": "1d333392-9a7c-4309-a757-72e52ef7aa76",
+                    "name": "ken_nhr_floods_wfp"
                 },
                 {
                     "id": "45705e33-9c29-428e-a2f1-9109edd2bbce",
@@ -63498,7 +63506,7 @@
         },
         {
             "id": 150,
-            "series": "WFP - ICA Food Insecurity",
+            "series": "WFP - World Food Programme - Food Insecurity",
             "row": 150,
             "datasets": [
                 {
@@ -63598,7 +63606,7 @@
         },
         {
             "id": 151,
-            "series": "WFP - ICA Natural Shock Risk and Hazard",
+            "series": "WFP - World Food Programme - Natural Shock",
             "row": 151,
             "datasets": [
                 {
@@ -63666,7 +63674,7 @@
         },
         {
             "id": 152,
-            "series": "WFP - ICA Land Degradation",
+            "series": "WFP - World Food Programme- Land Degradation",
             "row": 152,
             "datasets": [
                 {
@@ -63726,7 +63734,7 @@
         },
         {
             "id": 153,
-            "series": "WFP - ICA Drought Risk and Hazard",
+            "series": "WFP - World Food Programme- Drought Risk",
             "row": 153,
             "datasets": [
                 {
@@ -63794,7 +63802,7 @@
         },
         {
             "id": 154,
-            "series": "WFP - ICA Landslide Risk and Hazard",
+            "series": "WFP - World Food Programme- Landslide Risk",
             "row": 154,
             "datasets": [
                 {
@@ -63846,7 +63854,7 @@
         },
         {
             "id": 155,
-            "series": "WFP - ICA Categories & Areas",
+            "series": "WFP - World Food Programme - ICA Categories & Areas",
             "row": 155,
             "datasets": [
                 {

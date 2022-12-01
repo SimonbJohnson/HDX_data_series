@@ -4,11 +4,11 @@ import csv
 output = {'data series':[],'excluded':[],'clean':[]}
 names = {'data series':{},'excluded':{},'clean':{}}
 
-with open('package_title_lookup.json') as json_file:
+with open('working files/package_title_lookup.json') as json_file:
 	titleLookUp = json.load(json_file)
 
 total = 0
-with open('monthly data_series/Final data series October.csv', 'r') as csvfile:
+with open('monthly_data_series/Final data series september.csv', 'r') as csvfile:
 	reader = csv.reader(csvfile)
 	count = 1
 	rowCount = 1
@@ -18,8 +18,11 @@ with open('monthly data_series/Final data series October.csv', 'r') as csvfile:
 			datasetIDs = row[12].replace(" & ","|").split("|")
 			index = 14
 			for ID in datasetIDs:
-				datasets.append({'id':ID,'name':titleLookUp[ID]})
-				index = index +1
+				try:
+					datasets.append({'id':ID,'name':titleLookUp[ID]})
+					index = index +1
+				except:
+					print('data set removed')
 
 			dataSeries = {'id':count,'series':row[1],'row':rowCount,'datasets':datasets,'count':len(datasets)}
 			
@@ -35,12 +38,12 @@ with open('monthly data_series/Final data series October.csv', 'r') as csvfile:
 				seriesTypeKey = 'excluded'
 			if seriesTypeKey!= '':
 				if row[1] in names[seriesTypeKey]:
-					index = names['data series'][row[1]]
+					index = names[seriesTypeKey][row[1]]
 					output[seriesTypeKey][index]['count'] = output[seriesTypeKey][index]['count'] + len(datasets)
 					output[seriesTypeKey][index]['datasets'] = output[seriesTypeKey][index]['datasets'] + datasets
 				else:
-					output['data series'].append(dataSeries)
-					names['data series'][row[1]] = len(output['data series']) - 1
+					output[seriesTypeKey].append(dataSeries)
+					names[seriesTypeKey][row[1]] = len(output[seriesTypeKey]) - 1
 				total = total + len(datasets)
 		count=count+1
 		rowCount = rowCount + 1
