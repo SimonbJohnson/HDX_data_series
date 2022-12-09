@@ -1,13 +1,14 @@
 import json
 import csv
 
+monthSuffix = 'nov'
+
 def createDataSetLookUp(dataseries):
 	datasetLookUp = {}
-	for key in dataseries:
-		for series in dataseries[key]:
-			seriesID = series['id']
-			for dataset in series['datasets']:
-				datasetLookUp[dataset['id']] = {'id':seriesID,'name':series['series'],'type':key,'count':series['count']}
+	for series in dataseries:
+		seriesID = series['id']
+		for dataset in series['datasets']:
+			datasetLookUp[dataset['id']] = {'id':seriesID,'name':series['series'],'type':series['type'],'count':series['count']}
 	return datasetLookUp
 
 def listOfKeys(matches):
@@ -47,9 +48,9 @@ def candidateSeriesCSV(dataseriess):
 		output.append(line)
 	return output
 
-lastMonthFile = 'monthly_data_series/data_series_sept.json'
-thisMonthFile = 'data_series_october_first_output.json'
-lookUpFile = 'working files/package_title_lookup.json'
+lastMonthFile = '../monthly_data_series/data_series_oct.json'
+thisMonthFile = '../working files/data_series_first_cluster_nov.json'
+lookUpFile = '../working files/package_title_lookup_nov.json'
 
 with open(lastMonthFile) as json_file:
 	lastMonth = json.load(json_file)
@@ -90,7 +91,7 @@ for candidateSeries in thisMonth:
 	
 	summary['total'] = summary['total']+1
 	percentNotMatched = candidateSeries['matches']['none'] / len(candidateSeries['IDs'])
-	if percentNotMatched < 0.20:
+	if percentNotMatched < 0.75:
 		if len(candidateSeries['matches'])==2:
 			summary['matchedToOne'] = summary['matchedToOne'] + 1
 			assessmentSummary['matchedToOne'] = assessmentSummary['matchedToOne'] + candidateSeries['matches']['none']
@@ -116,11 +117,14 @@ for key in output:
 	rows = []
 	rows = candidateSeriesCSV(output[key])
 
-	with open("monthly_data_series/input_files/october_"+key+".csv", "w") as f:
+	with open("../monthly_data_series/input_files/"+monthSuffix+"/"+key+"_"+monthSuffix+".csv", "w") as f:
 	    writer = csv.writer(f)
 	    writer.writerows(rows)
 
+print('Data series count')
 print(summary)
+print('unmatched')
 print(unmatched)
+print('assessment summary')
 print(assessmentSummary)
 

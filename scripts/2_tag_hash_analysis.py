@@ -12,6 +12,9 @@ import Levenshtein
 from difflib import SequenceMatcher
 import operator
 
+#month suffix
+#update this variable
+monthSuffix = 'nov'
 
 def substringCounter(names):
 	substring_counts={}
@@ -47,7 +50,27 @@ def regroupOnName(series):
 		outputseries.append(output[key])
 	return outputseries
 
-packageFile = 'working files/hdxMetaDataScrape_oct.json'
+def regroupOnNameJSON(series):
+	output = {}
+	for row in series:
+		print(row)
+		seriesValue = row['name']
+		if seriesValue in output:
+			output[seriesValue]['org'] = output[seriesValue]['org']+'|'+row['org']
+			output[seriesValue]['titles'] = output[seriesValue]['titles'] + row['titles']
+			output[seriesValue]['tags'] = output[seriesValue]['tags'] + row['tags']
+			output[seriesValue]['batch'] = output[seriesValue]['batch'] + row['batch']
+			output[seriesValue]['IDs'] = output[seriesValue]['IDs'] + row['IDs']
+			#needs to combine series names
+		else:
+			output[seriesValue] = row
+
+	outputseries = []
+	for key in output:
+		outputseries.append(output[key])
+	return outputseries
+
+packageFile = '../working files/hdxMetaDataScrape_'+ monthSuffix +'.json'
 
 print('Loading file')
 with open(packageFile) as json_file:
@@ -80,33 +103,28 @@ for package in packages:
 
 count = 0
 csvOutput = []
+jsonOutput = []
 for key in output:
 	series = output[key]
 	#need to add an exception for CODs
 	if len(series['titles'])>4 and len(series['tags'])>0:
-		print(series)
 		count = count+1
-		#name = Levenshtein.quickmedian(series['titles'])
-		#print(name)
 		name = substringCounter(series['titles'])
 		print(name)
-		csvOutput.append([name,series['org'],'|'.join(series['tags']),'|'.join(series['batch']),'|'.join(series['IDs']),len(series['titles'])] + series['titles'])
+		series['name'] = name
+		series['count'] = len(series['titles'])
+		jsonOutput.append(series)
+jsonOutput = regroupOnNameJSON(jsonOutput)
 
-#make this work on the JSON structure for easy combintion of name data series
-csvOutput = regroupOnName(csvOutput)
 
-with open("series_october.csv", "w", newline="") as f:
-    writer = csv.writer(f)
-    writer.writerows(csvOutput)
-
-JSONOutput = []
+JSONOutput2 = []
 #create JSON output
 for key in list(output):
 	series = output[key]
 	if (len(series['titles'])>4 and len(series['tags'])>0) or 'common operational dataset - cod' in series['tags']:
-		JSONOutput.append(series)
+		JSONOutput2.append(series)
 
 
 #ignore names field as incorrect
-with open('data_series_october_first_output.json', 'w', encoding='utf-8') as f:
-	json.dump(JSONOutput, f, ensure_ascii=False, indent=4)
+with open('../working files/data_series_first_cluster_'+ monthSuffix+'.json', 'w', encoding='utf-8') as f:
+	json.dump(JSONOutput2, f, ensure_ascii=False, indent=4)
