@@ -1,12 +1,13 @@
 import csv
 import json
 
-lastFile = '../monthly_data_series/data_series_oct.json'
-targetFile = '../monthly_data_series/data_series_nov.json'
-packageLookupFile = '../working files/package_title_lookup_nov.json'
+lastFile = '../monthly_data_series/data_series_feb.json'
+targetFile = '../monthly_data_series/data_series_mar.json'
+packageLookupFile = '../working files/package_title_lookup_mar.json'
 
-changeFiles = ['nov/november_cods_approved.csv','nov/november_matchedtoone_approved.csv','nov/november_matchedtomany_approved.csv']
-newFile = 'nov/november_new_approved.csv'
+changeFiles = ['mar/March Data Series - cods.csv','mar/March Data Series - matchedtomany.csv','mar/March Data Series - matchedtoone.csv']
+newFiles = ['mar/March Data Series - new0.csv','mar/March Data Series - new2.csv','mar/March Data Series - new3.csv','mar/March Data Series - new4.csv','mar/March Data Series - new5.csv','mar/March Data Series - new6.csv','mar/March Data Series - new7.csv','mar/March Data Series - new8.csv','mar/March Data Series - new10.csv','mar/March Data Series - new11.csv','mar/March Data Series - new12.csv','mar/March Data Series - new13.csv']
+clean = []
 
 def getDataseriesIndex(seriesID):
 	index = -1
@@ -46,31 +47,41 @@ for file in changeFiles:
 		for row in reader:
 			if row[0]=='Approved' or row[0]=='Exclude':
 				dataseriesID = row[6]
+				if dataseriesID[0:5] == 'none|':
+					dataseriesID = dataseriesID[5:]
 				if row[0]=='Exclude':
 					dataseriesID = 0
-				print(row[6])
+				print(dataseriesID)
 				datasets = row[7].split('|')
 				dataseriesIndex = getDataseriesIndex(int(dataseriesID))
 				for dataset in datasets:
 					datasetName = packageLookup[dataset]
 					dataseries[dataseriesIndex]['datasets'].append({'id':dataset,'key':datasetName})
 
-with open('../monthly_data_series/input_files/'+newFile, 'r') as csvfile:
-	reader = csv.reader(csvfile)
-	next(reader)
-	currentID = highestDataseriesID(dataseries)
-	for row in reader:
-		if row[0]=='Create':
-			currentID = currentID + 1
-			series = {'id':currentID,'series':row[1],'datasets':[],'count':0,'type':'data series'}
-			datasets = row[7].split('|')
-			for dataset in datasets:
-				datasetName = packageLookup[dataset]
-				series['datasets'].append({'id':dataset,'key':datasetName})
-			series['count'] = len(datasets)
-			dataseries.append(series) 
-
-
+for file in newFiles:
+	with open('../monthly_data_series/input_files/'+file, 'r') as csvfile:
+		reader = csv.reader(csvfile)
+		currentID = highestDataseriesID(dataseries)
+		currentID = currentID + 1
+		index = 0
+		series = {'id':currentID,'series':'','datasets':[],'count':0,'type':'data series'}
+		exclude = False
+		dataExcludeIndex = getDataseriesIndex(0)
+		for row in reader:
+			if index == 0:
+				if row[0]=='clean' or row[0]=='Clean':
+					series['type']='clean'
+				if row[0]=='exclude' or row[0]=='Exclude':
+					exclude = True
+				series['series'] = row[0]
+			if index>1:
+				if exclude == True:
+					dataseries[dataseriesIndex]['datasets'].append({'id':row[0],'key':row[1]})
+				else:
+					series['datasets'].append({'id':row[0],'key':row[1]})
+			index= index+1
+		series['count'] = len(datasets)
+		dataseries.append(series) 
 
 with open(targetFile, 'w', encoding='utf-8') as f:
 	json.dump(dataseries, f, ensure_ascii=False, indent=4)

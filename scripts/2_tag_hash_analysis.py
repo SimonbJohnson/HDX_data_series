@@ -14,7 +14,7 @@ import operator
 
 #month suffix
 #update this variable
-monthSuffix = 'nov'
+monthSuffix = 'mar'
 
 def substringCounter(names):
 	substring_counts={}
@@ -85,6 +85,10 @@ for package in packages:
 	taglist = []
 	for tag in package['tags']:
 		taglist.append(tag['display_name'])
+	if 'cod_level' in package:
+		taglist.append('common operational dataset - cod')
+		print('This is a cod')
+		print(package['cod_level'])
 	taglist = sorted(taglist)
 	hashInput = package['organization']['title'] + ''.join(taglist)
 	hashValue = hash(hashInput)

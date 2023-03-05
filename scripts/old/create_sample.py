@@ -8,7 +8,7 @@
 import json
 import os
 
-packageFile = 'hdxMetaDataScrape.json'
+packageFile = '../../working files/hdxMetaDataScrape_feb.json'
 
 print('Loading file')
 with open(packageFile) as json_file:
