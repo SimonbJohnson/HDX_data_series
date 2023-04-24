@@ -7139,14 +7139,6 @@
             {
                 "id": "b7ce4359-768a-4857-8ad7-83216e446b23",
                 "name": "Poland - Subnational Population Statistics"
-            },
-            {
-                "id": "95ba5281-fd76-4d3a-ae29-247e1ff26447",
-                "name": "Haiti - Subnational Population Statistics"
-            },
-            {
-                "id": "3d9b037f-5112-4afd-92a7-190a9082bd80",
-                "name": "Ethiopia - Subnational Population Statistics"
             }
         ],
         "count": 75,
@@ -49496,154 +49488,6 @@
             {
                 "id": "ebb19588-8465-4507-8a14-e8b51038ca9f",
                 "key": "Nigeria_CDW_Baseline_Assessments_Dec14_Oct17"
-            },
-            {
-                "id": "9c60a249-609c-4b68-aedf-5ee9e112d0a1",
-                "name": "Mauritania Displacement Data — Migrants Baseline Assessment - Nouakchott — [IOM DTM]"
-            },
-            {
-                "id": "cacf12d4-22b1-438f-bcb4-78aa9078ab94",
-                "name": "Libya Migration Data - [Migrants] - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "7fc0d56d-4176-4ff8-a334-851c14acefdf",
-                "name": "South Sudan Displacement Data - [IDPs] - Baseline - Feb2014 to Dec2017 - [IOM DTM]"
-            },
-            {
-                "id": "ff5d9efd-3c94-4701-8dfe-e559d2da5bac",
-                "name": "DRC Displacement Data - South Kivu Province - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "d014687b-b1d6-4964-a0c1-c13e8469c48c",
-                "name": "DRC Displacement Data - Kasai Province - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "d24e06b9-4a5d-4b82-baad-a1f415f54fb9",
-                "name": "DRC Displacement Data - Kasai Oriental Province - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "61d97b52-55f3-4553-b2fa-276dcac360f2",
-                "name": "DRC Displacement Data - Kasai Central Province - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "7e8fbe79-033d-4584-8916-f967f1d21fbc",
-                "name": "Chad Displacement Data - Baseline Assessment - Returns - Region Moyen Chari - [IOM DTM]"
-            },
-            {
-                "id": "9d4872f2-2978-47d9-839c-f88d7b497fe0",
-                "name": "Chad Displacement Data - Baseline Assessment - Returns - Region Logone Oriental - [IOM DTM]"
-            },
-            {
-                "id": "e7631f3d-e3b1-40ba-a5bd-b112df323008",
-                "name": "Chad Displacement Data - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "03c95eef-e3c5-40f6-9c86-9dcdc692be03",
-                "name": "South Sudan Displacement - [IDPs, Returnees] - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "89d609ef-b8c0-47b5-91a6-fe29af7d147c",
-                "name": "Libya Displacement - [IDPs, Returnees] - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "c0a14c66-a782-45bd-8a7e-1a464167e9ea",
-                "name": "El Salvador Displacement Data - [IDPs] - Site Assessment [IOM DTM]"
-            },
-            {
-                "id": "bb4d3931-594c-400f-acd7-801d121dec31",
-                "name": "CAR Displacement Data - Site Assessment [IOM DTM]"
-            },
-            {
-                "id": "140a45e9-6563-47e7-89b1-9109d89a2211",
-                "name": "Cameroon Displacement - [IDPs, Returnees, Refugees] - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "90deb235-1bf5-4bae-b231-3393222c2d00",
-                "name": "Afghanistan Displacement Data - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "a4bbccf1-d5ae-4712-b378-29c1372c7a42",
-                "name": "Mozambique Displacement Data - Baseline Assessment - Northern Mozambique Crisis - [IOM DTM]"
-            },
-            {
-                "id": "5fa6eebf-2a6d-4aca-bb4e-fb625cb3b44d",
-                "name": "Central African Republic: Displacement Data - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "1eb01fef-133c-4675-b4e9-a76b29511a02",
-                "name": "Burundi Displacement - [IDPs] - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "289a451a-8d6a-4211-bfbd-5f7f6afb2897",
-                "name": "Mozambique Displacement Data - Baseline Assessment - Idai - [IOM DTM]"
-            },
-            {
-                "id": "1d824d77-8003-40b4-99c2-b24d0c840dfb",
-                "name": "Zimbabwe - [IDPs, Returnees] - Cyclone IDAI - Baseline Assessment - [IOM DTM]"
-            },
-            {
-                "id": "558c18df-a907-48b6-831b-b3e44b7cc249",
-                "name": "Ukraine Displacement Data - Baseline Assessment - Raion level [IOM DTM]"
-            },
-            {
-                "id": "891f7d46-b320-47ea-857d-0a251d51e6fa",
-                "name": "Ukraine Displacement Data - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "47a9b677-be48-4bc9-a696-e6f39b524420",
-                "name": "Uganda Displacement Data - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "4fcca449-1751-4560-b7ac-5d207ab53480",
-                "name": "South Africa Displacement Data - Baseline Ward Assessment [IOM DTM]"
-            },
-            {
-                "id": "b421e1e5-a8cc-48c1-8e85-dc2d01706584",
-                "name": "Somalia Displacement - [IDPs, Returnees] - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "133674e8-cded-4bd8-b1cf-5e98af06bece",
-                "name": "Nigeria - IOM DTM R3-R7 datasets - Baseline and Site assessment data"
-            },
-            {
-                "id": "0a84c359-573b-4b2b-9981-5a8866cb2965",
-                "name": "Nigeria Displacement Data - North Central & West Zones - Baeline Assessment [IOM DTM]"
-            },
-            {
-                "id": "4adf7874-ae01-46fd-a442-5fc6b3c9dff1",
-                "name": "Nigeria Displacement - [IDPs] - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "355e2730-00fb-4760-a756-a63f274e66d4",
-                "name": "Nepal Displacement - [IDPs] - Baseline Assessment - Floods2020 - [IOM DTM]"
-            },
-            {
-                "id": "ea41f7c7-2ebe-456b-b5eb-e3e0ac8d708b",
-                "name": "Mali Displacement - [IDPs, Returnees] - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "eb78c733-25fc-4195-b39c-5b33365cc924",
-                "name": "Haiti - Displacement - [IDPs] - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "7e359a24-a903-4351-b71d-dd1de70b6445",
-                "name": "DRC Displacement Data - Tanganyika Province - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "baa8fa63-d293-45a7-9251-03fdb124b136",
-                "name": "DRC Displacement Data - Sankuru Province - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "5fc24740-a6f4-49b3-9187-220580828e9b",
-                "name": "DRC Displacement Data - North Kivu Province - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "1f54fa76-83f9-444f-ad03-b71c86032fe9",
-                "name": "DRC Displacement Data - Lomami Province - Baseline Assessment [IOM DTM]"
-            },
-            {
-                "id": "8f4a0193-0db5-4e78-85fa-acb0b63b1eed",
-                "name": "DRC Displacement Data - Ituri Province - Baseline Assessment [IOM DTM]"
             }
         ],
         "count": 13,
@@ -49705,186 +49549,11 @@
             {
                 "id": "fb0e16af-f9bb-4aa2-b275-4801bcdf40a3",
                 "key": "IOM DTM Mozambique Dataset Round 1 - Site assessment data"
-            },
-            {
-                "id": "b93c9a24-2399-4b57-a886-99e98394e265",
-                "name": "South Sudan Displacement Data - Site Assessment [IOM DTM]"
-            },
-            {
-                "id": "891f3f4f-091e-4856-9d93-e08193f4c219",
-                "name": "Yemen Displacement Data - Area Assessment [IOM DTM]"
-            },
-            {
-                "id": "27a2c58e-eccc-4d7c-8782-7b7fd2272240",
-                "name": "South Sudan Displacement - Multi-Sectoral Village Assessment -IDPs - Returnees - [IOM-DTM]"
-            },
-            {
-                "id": "c44750c1-e79b-4cb7-816d-7f2f86b84f03",
-                "name": "Nigeria Displacement - [IDPs] - Location Assessment [IOM DTM]"
-            },
-            {
-                "id": "b245aed9-6cd3-4e7d-ac59-4556593d4fd8",
-                "name": "Nigeria Displacement Data - North Central & West Zones - Location Assessment [IOM DTM]"
-            },
-            {
-                "id": "e578ecde-2e3c-4f5b-88c3-dd09c635d8c9",
-                "name": "Nigeria Displacement Data - North Central & West Zones - Site Assessment [IOM DTM]"
-            },
-            {
-                "id": "0d776a1c-e2c0-49fc-857e-949be7013f99",
-                "name": "Niger Displacement Data - Village Assessment Survey (VAS) [IOM DTM]"
-            },
-            {
-                "id": "27baf423-2d13-49a4-bd72-cb65d8f924da",
-                "name": "Haiti Displacement - [IDPs] - Site Assessment [IOM DTM]"
-            },
-            {
-                "id": "78eefd28-290c-4fa1-8dab-29e4b7c10e34",
-                "name": "Guatemala Displacement Data - Site Assessment [IOM DTM]"
-            },
-            {
-                "id": "7df7ab69-9ab5-4043-a927-78aecc97774b",
-                "name": "Burkina Faso Displacement Data - Site Assessment [IOM DTM]"
-            },
-            {
-                "id": "702af566-9df0-41bc-9b3b-b3907f8f632a",
-                "name": "Ethiopia Displacement Data - Village Assessment [IOM DTM]"
-            },
-            {
-                "id": "de0a7adc-5ef1-410a-a532-31b34ba45b07",
-                "name": "South Sudan - Village Assessment - Education Facilities - [IOM-DTM]"
-            },
-            {
-                "id": "fa3c84cc-2a8b-41e1-bb65-fd436367561d",
-                "name": "Philippines Displacement - IDPs -Mindanao Earthquake - Site Assessment [IOM DTM]"
-            },
-            {
-                "id": "680cb221-359b-49c1-bcb6-8b681109774c",
-                "name": "Indonesia Displacement Data - Sulawesi Earthquake Site Assessment [IOM DTM]"
-            },
-            {
-                "id": "f973b662-2489-4cbd-9ff2-164c08a2e3e0",
-                "name": "Indonesia Displacement Data - Lombok Earthquake Site Assessment [IOM DTM]"
-            },
-            {
-                "id": "48edf73e-d6fe-4b90-b316-5026639abbe7",
-                "name": "IOM DTM Somalia Settlements"
-            },
-            {
-                "id": "162936be-722b-4559-970d-204d8a704d5e",
-                "name": "Chad Displacement Data - Site & Village Assessment - Lac Province - [IOM DTM]"
-            },
-            {
-                "id": "799e619c-ef79-4101-8a31-50418adbb4a8",
-                "name": "The Bahamas Displacement - Hurricane Dorian - Site Assessment R3 - [IOM DTM]"
-            },
-            {
-                "id": "f588a098-1bd1-465d-b104-40320cffd653",
-                "name": "Mozambique Displacement - Multi Sectoral Location Assessment - Kenneth - [IOM DTM]"
-            },
-            {
-                "id": "7f7053f6-8c1d-4484-a23c-1a03a8ae2903",
-                "name": "Mozambique Displacement - [IDPs] - Site Assessment - Idai - [IOM DTM]"
-            },
-            {
-                "id": "e381991e-16ab-4797-90ce-07970aa876b3",
-                "name": "Mozambique Displacement Data - IDAI Cyclone Sites Tracking [IOM-DTM]"
-            },
-            {
-                "id": "8dfed11c-838f-41d3-8162-3e0cc2f5311b",
-                "name": "Malawi Displacement Data - Site Assessment - Idai - [IOM DTM]"
-            },
-            {
-                "id": "a9e6c001-fda1-47d9-bfce-31ed91187099",
-                "name": "Guatemala Displacement - [IDPs] - Hurricane ETA and IOTA - Site Assessment [IOM DTM]"
-            },
-            {
-                "id": "496c83f2-f7c7-4448-bd0e-dcb236b5abd1",
-                "name": "Dominica Displacement Data - Site Assessment [IOM DTM]"
-            },
-            {
-                "id": "62bc7aff-287a-4426-a63d-6c322989357a",
-                "name": "Zimbabwe - [IDPs] - Cyclone IDAI - Village Assessment - [IOM DTM]"
-            },
-            {
-                "id": "20c83e93-b225-4132-af68-42de799d4bd0",
-                "name": "Malawi Displacement Data - Site Assessment - Tropical Storm Ana - [IOM DTM]"
-            },
-            {
-                "id": "bef9f529-5ec0-4b31-a1fb-e9cb2eb1c987",
-                "name": "IOM Bangladesh - Needs and Population Monitoring (NPM) Round 9 Site Assessment"
-            },
-            {
-                "id": "49f3ad79-eaeb-4df0-8da2-007c0f25ff71",
-                "name": "IOM Bangladesh- Needs and Population Monitoring (NPM) Round 6 Site Assessment"
-            },
-            {
-                "id": "2a44a78e-3990-44b0-889b-67a3cdd1f704",
-                "name": "IOM Bangladesh - Needs and Population Monitoring (NPM) Round 8 Site Assessment"
-            },
-            {
-                "id": "c639b7bd-21fe-4dfc-8ee2-f2b145ce6891",
-                "name": "IOM Bangladesh - Needs and Population Monitoring (NPM) Round 7 Site Assessment"
-            },
-            {
-                "id": "adb61b4f-ba60-472b-9903-cf3024993ddb",
-                "name": "IOM Bangladesh - Needs and Population Monitoring (NPM) Round 10 Site Assessment"
-            },
-            {
-                "id": "698042c9-8e36-4ed8-8d85-923657e463a4",
-                "name": "IOM Bangladesh - Needs and Population Monitoring (NPM) Round 16 Site Assessment"
-            },
-            {
-                "id": "dc9ca2b3-ce26-4df9-834a-a17e4c74534d",
-                "name": "IOM Bangladesh - Needs and Population Monitoring (NPM) Round 15 Site Assessment"
-            },
-            {
-                "id": "8f2338f5-d028-485a-a2c5-b44c3ca452d5",
-                "name": "IOM Bangladesh - Needs and Population Monitoring (NPM) Round 13 Site Assessment"
-            },
-            {
-                "id": "1b88bca6-2d7c-423e-97d7-17160d056e9a",
-                "name": "IOM Bangladesh - Needs and Population Monitoring (NPM) Round 12 Site Assessment"
-            },
-            {
-                "id": "3cb08900-d6f1-4b0e-b1d0-697c3db30236",
-                "name": "IOM Bangladesh - Needs and Population Monitoring (NPM) Round 11 Site Assessment"
-            },
-            {
-                "id": "387a6af1-8e04-4cd2-a64a-2c72e6f908fe",
-                "name": "South Sudan - Village Assessment - Multi Sector Services Availability - [IOM-DTM]"
-            },
-            {
-                "id": "4d28b9c9-dc9a-4fe3-823a-0773b63446c7",
-                "name": "South Sudan - Village Assessment - Health Facilities - [IOM-DTM]"
-            },
-            {
-                "id": "6064c16a-8bf4-4e94-bbab-3aafda4a4ef2",
-                "name": "HAITI - IOM DTM DATASETS - SITE ASSESSMENT DATA"
-            },
-            {
-                "id": "68f6989f-efdd-4bab-a5b1-09c0029a1a46",
-                "name": "Peru Displacement - [IDPs] - Site Assessment [IOM DTM]"
-            },
-            {
-                "id": "dd80e4bd-617e-40d2-9f68-1703edbfd3ca",
-                "name": "Kenya Displacement - [IDPs] - Site Assessment [IOM DTM]"
-            },
-            {
-                "id": "2eca0fac-5bd6-44a9-911d-e54d8e02807d",
-                "name": "Ecuador Displacement - [IDPs] - Site Assessment [IOM DTM]"
-            },
-            {
-                "id": "cba17347-ff3b-4e3f-acca-e084bfca514d",
-                "name": "IOM Bangladesh - Needs and Population Monitoring (NPM) Round 17 Site Assessment"
-            },
-            {
-                "id": "f65ae171-6a8a-431e-8caf-37ab33654fed",
-                "name": "IOM Bangladesh - Needs and Population Monitoring (NPM) Round 14 Site Assessment"
             }
         ],
         "count": 0,
         "type": "data series"
+
     },
     {
         "id": 272,
@@ -49902,46 +49571,11 @@
             {
                 "id": "f71eda5a-5f71-441d-a868-2ab8d55412ad",
                 "key": "Yemen Emergency Event Tracking Jun-Aug 2018 [IOM DTM]"
-            },
-            {
-                "id": "027f0bfe-8f09-46ca-95d1-3eed6a8fb0c7",
-                "name": "DTM Round1 Flow monitoring of venezuelan migration - Peru"
-            },
-            {
-                "id": "4ab20fbf-628d-45fc-9834-940cced0a84a",
-                "name": "DTM Round 3 Flow Monitoring of Venezuelan Migration - Peru"
-            },
-            {
-                "id": "96a62268-6da6-424b-bb72-721f64c28681",
-                "name": "South Sudan Population Movement - [Migrants] - [IOM DTM]"
-            },
-            {
-                "id": "a63d369e-9e46-485e-af71-64fe483dc159",
-                "name": "Yemen Displacement - Population Movement [Migrants and Returns] - [IOM-DTM]"
-            },
-            {
-                "id": "8b4d9c0b-fbc0-4c8d-a5cd-f11b45dbb80c",
-                "name": "Yemen Displacement - Daily Tracking - [IDPs, Returnees] - [IOM DTM]"
-            },
-            {
-                "id": "ebfb820b-7e32-4751-9ec8-7ee9d0cca63d",
-                "name": "Sudan Displacement - Ag Geneina - Emergency Event Tracking - IDPs [IOM DTM]"
-            },
-            {
-                "id": "12e3f891-81b4-4b57-92ea-8c56cb8d1749",
-                "name": "DTM Round2 Flow Monitoring of Venezuelan Migration - Peru"
-            },
-            {
-                "id": "7c50ddcd-3ed2-4a9f-a41f-cacc6c07feb5",
-                "name": "Burundi Displacement Data - Emergency Event Tracking [IOM DTM]"
-            },
-            {
-                "id": "2fb4c164-7312-44c2-9850-009efae2f620",
-                "name": "Vanuatu Displacement Data - Manaro 2018-2019 [IOM DTM]"
-            }
+            }        
         ],
         "count": 0,
         "type": "data series"
+
     },
     {
         "id": 59,
@@ -50092,14 +49726,6 @@
             {
                 "id": "e84583de-0dcb-4841-b57f-4ff532c5349c",
                 "name": "Mozambique: Languages"
-            },
-            {
-                "id": "114ff415-3edf-49f7-8d56-91168ef62147",
-                "name": "Nicaragua: Indigenous Languages"
-            },
-            {
-                "id": "0e616edb-dffa-4ebc-9aa1-90f6a4db33ff",
-                "name": "DRC: Languages"
             }
         ],
         "count": 27,
@@ -50190,7 +49816,7 @@
                 "id": "53d029a1-cd50-40d6-96d2-da8f6a92f545",
                 "key": "Afghanistan - Who does What Where (October to December 2022)"
             },
-            {
+                        {
                 "id": "1c845573-2bba-4a1f-b6e1-3cb69fda5299",
                 "name": "Afghanistan - Who does What Where"
             },
@@ -50217,18 +49843,6 @@
             {
                 "id": "99aeb3e3-ef14-4114-b205-1f5920fd971d",
                 "name": "Afghanistan - Who does What Where  (July to September 2016)"
-            },
-            {
-                "id": "8af1a7ec-feb4-476a-9805-db2e2304206e",
-                "name": "Afghanistan Who does What Where - July to September 2015"
-            },
-            {
-                "id": "187df1d3-f619-434c-a9c6-55cc7f4a4666",
-                "name": "Afghanistan - Who does What Where (July to September 2019)"
-            },
-            {
-                "id": "b9fff525-242d-4492-9c36-75d18e169002",
-                "name": "Afghanistan - Who does What Where (April to June 2017)"
             }
         ],
         "count": 16,
@@ -50270,18 +49884,6 @@
             {
                 "id": "98c765fb-52db-4118-81e2-24c92046e2ea",
                 "name": "Northeast Nigeria 3W (January to March 2020)"
-            },
-            {
-                "id": "08cfde7f-a2d9-443b-a0d0-9200d1ebe894",
-                "name": "Nigeria: Who is Doing What Where (3Ws)"
-            },
-            {
-                "id": "1aa324e9-1274-449b-9428-23260a556d44",
-                "name": "Nigeria: Northeast Nigeria 3Ws (January-December 2021)"
-            },
-            {
-                "id": "16e257cf-3c98-474c-8e13-0855956f13ce",
-                "name": "Nigeria: Northeast Nigeria 3Ws"
             }
         ],
         "count": 8,
@@ -58427,10 +58029,6 @@
             {
                 "id": "08d4f935-d84b-43f1-958a-2e87241156f6",
                 "name": "El Salvador - Who is Doing What Where (3W)"
-            },
-            {
-                "id": "f35ffbfe-428e-4b1f-a41e-1cd31b77e8cc",
-                "name": "Caribbean Hurricanes: Regional Who is Doing What Where (3W)"
             }
         ],
         "count": 6,
@@ -60389,10 +59987,6 @@
             {
                 "id": "29aa9afc-dc8b-431c-9480-6dc02374f787",
                 "name": "South Sudan: Projected COVID-19 Sub-national Cases"
-            },
-            {
-                "id": "f10c4f24-0098-426f-83f0-1ee1d191ef81",
-                "name": "Iraq: Projected COVID-19 Sub-national Cases"
             }
         ],
         "count": 5,
@@ -68494,10 +68088,6 @@
             {
                 "id": "3dc339a7-83ab-4fb2-b9d7-484cfeee9db7",
                 "name": "IRC Ethiopia UN OCHA Funded Emergency Responses 30 April 2019 Update"
-            },
-            {
-                "id": "7e96fdea-6856-43fa-b54f-d0fc2de4ebfb",
-                "name": "IRC Ethiopia All Emergency Responses 31 August 2017 Update"
             }
         ],
         "count": 18,
@@ -68643,58 +68233,6 @@
             {
                 "id": "81ebce91-f03e-4e32-812b-56b9d15c230e",
                 "name": "IRC Ethiopia OFDA Funded Emergency Responses 30 November 2018 Updates"
-            },
-            {
-                "id": "ab0660c7-9d76-4bfb-8d0a-f4e3fb90601a",
-                "name": "IRC Ethiopia OFDA Funded Emergency Responses 31 August Update"
-            },
-            {
-                "id": "ab647fe3-4cad-468f-a227-8ef89c94fe37",
-                "name": "IRC Ethiopia ECHO Funded Emergency Responses 29 February 2020 Update"
-            },
-            {
-                "id": "96def60f-1a1a-44e5-89f5-6fd06e489502",
-                "name": "IRC Ethiopia ECHO Funded Emergency Responses 30 June 2020 Update"
-            },
-            {
-                "id": "abc98580-7816-4ce2-9481-91a3c28c42ce",
-                "name": "IRC Ethiopia OFDA Funded Emergency Responses 30 November 2017 update"
-            },
-            {
-                "id": "7b9e6d93-4287-4a10-a057-18d5b544ecfb",
-                "name": "IRC Ethiopia OFDA Funded Emergency Responses 30 June 2018 Update"
-            },
-            {
-                "id": "5a734011-243e-4de0-baf9-f0ee3dbd9070",
-                "name": "IRC Ethiopia OFDA Funded RRM Emergency Responses 30 June 2020 Update"
-            },
-            {
-                "id": "3d91c6b3-0324-461c-a40e-d885f95702f9",
-                "name": "IRC Ethiopia ECHO Funded Emergency Responses 30 June 2020 update and Hotspot Woredas"
-            },
-            {
-                "id": "5119ce5e-94af-4bb8-8ea3-2b8446a91e31",
-                "name": "IRC Ethiopia ECHO Funded ERM VII Emergency Responses - Aug 2021 Update by Sectors & IPs"
-            },
-            {
-                "id": "ec516b29-f18b-4978-844c-bbfff3607810",
-                "name": "IRC Ethiopia OFDA/USAID Funded RRM Emergency Responses - Aug 2021 Update by Sectors & IPs"
-            },
-            {
-                "id": "f2ceca52-405f-4c4a-9b00-a83f3757ac22",
-                "name": "IRC Ethiopia OFDA Funded RRM Emergency Responses 31 July 2020 Update by Sectors & IPs"
-            },
-            {
-                "id": "83c54cac-f33c-40ff-9869-94779e89d250",
-                "name": "IRC Ethiopia OFDA & ECHO Funded Emergency Responses 31 August 2018 Update-by Sectors & IPs"
-            },
-            {
-                "id": "99d9c01c-00e6-4bd4-aa6e-339c19c55e88",
-                "name": "IRC Ethiopia ECHO Funded ERM VII Ongoing Emergency Responses 30 April 2019 Update by Sectors & IPs"
-            },
-            {
-                "id": "0aba0fc6-c0af-48b0-ba7f-a841c2198e2a",
-                "name": "IRC Ethiopia ECHO Funded ERM VII Interventions 31 July 2020 Updates"
             }
         ],
         "count": 34,
@@ -68983,10 +68521,6 @@
             {
                 "id": "acae2d84-0b7f-4dcb-8b3a-f360d0fadd8e",
                 "name": "COD Admin 1 geojson simplified geometries from gistmaps live service source"
-            },
-            {
-                "id": "ddadcacd-3329-426d-ba36-6e0bff80e883",
-                "name": "COD Admin 0 geojson simplified geometries from gistmaps live service source"
             }
         ],
         "count": 7,
@@ -70547,8 +70081,7 @@
             {
                 "id": "331682f9-529a-4138-aa96-b5114962e3d6",
                 "key": "Benin - Railways"
-            },
-            {
+            },             {
                 "id": "b724e0b5-fd3f-484c-a282-14a806ec4f45",
                 "name": "DPR Korea - Airports"
             },
@@ -78015,130 +77548,6 @@
             {
                 "id": "92134b91-578b-4f0e-90ef-9d63170e9ead",
                 "key": "Sudan: 2021 HNO Baseline Data"
-            },
-            {
-                "id": "9d930b4b-f292-4032-80a0-aeaff42a3e13",
-                "name": "Niger: Humanitarian Needs Overview"
-            },
-            {
-                "id": "882d0746-ac2a-4471-b40d-a92dee832ee2",
-                "name": "Ethiopia: Humanitarian Needs Overview"
-            },
-            {
-                "id": "9c7035b9-bfae-4da8-8446-a92d2fcd3b50",
-                "name": "Nigeria : Humanitarian Needs Overview"
-            },
-            {
-                "id": "a6f0f0ce-83ef-465b-8b3b-a7cb36dd1a94",
-                "name": "Pakistan: Humanitarian Needs Overview"
-            },
-            {
-                "id": "95e20394-2ec2-4934-ac56-6dcef4899f4b",
-                "name": "Ukraine : Humanitarian Needs Overview"
-            },
-            {
-                "id": "c71b40e2-a13b-4a98-be3c-07dc6ef32bcc",
-                "name": "Mozambique: Humanitarian Needs Overview"
-            },
-            {
-                "id": "47f6ef46-500f-421a-9fa2-fefd93facf95",
-                "name": "Sahel : Humanitarian Needs Overview"
-            },
-            {
-                "id": "51bf4bbe-b66d-4a15-8d3e-f276698e6652",
-                "name": "Zimbabwe : Humanitarian Needs Overview"
-            },
-            {
-                "id": "1095c875-00e2-44ce-911f-7e9e285ecfc5",
-                "name": "Iraq - Humanitarian Needs Overview"
-            },
-            {
-                "id": "8bdcfd59-0541-4846-848f-56750e2e03f5",
-                "name": "Mali: Humanitarian Needs Overview"
-            },
-            {
-                "id": "aa08eb7c-2951-44d0-aac2-d6ed3b839ae0",
-                "name": "Cameroon: Humanitarian Needs Overview"
-            },
-            {
-                "id": "353b978c-b2eb-4751-ae97-fc468de28546",
-                "name": "Somalia: Humanitarian Needs Overview"
-            },
-            {
-                "id": "f2557dd3-3343-416c-8041-978940523044",
-                "name": "Libya: Humanitarian Needs Overview"
-            },
-            {
-                "id": "56fb6a8c-bf86-4678-ac4e-99873fa05f42",
-                "name": "Colombia: Humanitarian Needs Overview"
-            },
-            {
-                "id": "0aa8c43b-ea03-4ab4-b8dc-04c26542bf76",
-                "name": "Sudan: Humanitarian Needs Overview"
-            },
-            {
-                "id": "5988a0cf-6706-4f9a-aecf-db57a985ba20",
-                "name": "Chad: Humanitarian Needs Overview"
-            },
-            {
-                "id": "c22d14df-c1d3-4824-8b0e-23958c6fbf17",
-                "name": "Myanmar : Humanitarian Needs Overview"
-            },
-            {
-                "id": "c71b40e2-a13b-4a98-be3c-07dc6ef32bcc",
-                "name": "Mozambique: Humanitarian Needs Overview"
-            },
-            {
-                "id": "818d6828-7ae6-4871-aee3-41d5170ad2dc",
-                "name": "Burundi : Humanitarian Needs Overview"
-            },
-            {
-                "id": "13d4347e-91e0-4197-b387-98112a550b4f",
-                "name": "South Sudan : Humanitarian Needs Overview"
-            },
-            {
-                "id": "a98aca08-3e9f-4108-82d2-53e7df37742c",
-                "name": "South Sudan: Humanitarian needs overview"
-            },
-            {
-                "id": "bad884cd-48ef-407a-acc4-208675e091d2",
-                "name": "Burkina Faso : Humanitarian Needs Overview"
-            },
-            {
-                "id": "42466881-a63d-4d2a-bc80-065c42979905",
-                "name": "Central African Republic: Humanitarian Needs Overview"
-            },
-            {
-                "id": "cfd515f3-e45c-4c6b-a0f4-1a517f0b726f",
-                "name": "Syrian Arab Republic: Humanitarian Needs Overview"
-            },
-            {
-                "id": "aca411dc-d2ca-4931-b65c-f4a2ed37f3ae",
-                "name": "State of Palestine: Humanitarian Needs Overview"
-            },
-            {
-                "id": "38696db4-dace-400f-b048-9431c849de1d",
-                "name": "Sudan 2022 Humanitarian Needs Overview (HNO)"
-            },
-            {
-                "id": "01b94c26-4c5a-4aa9-8397-1348c82068d3",
-                "name": "Sudan: 2019 Humanitarian Needs Overview"
-            },
-            {
-                "id": "d294f0c8-23bf-4263-a0d9-92806a20425c",
-                "name": "Democratic Republic of the Congo: Humanitarian needs overview"
-            },
-            {
-                "id": "73f076d4-7bd1-41e7-83de-7d25ecbad789",
-                "name": "South Sudan Humanitarian Needs Overview HNO 2020"
-            },
-            {
-                "id": "8085ce41-98dc-42dc-aedc-b5dc904a194b",
-                "name": "Democratic People's Republic of Korea : Humanitarian Needs Overview"
-            },
-            {
-                "id": "3eab7ed8-d4df-4ba7-8848-c5a0e121421d",
-                "name": "Democratic Republic of the Congo: Humanitarian Needs Overview"
             }
         ],
         "count": 7,

@@ -33,8 +33,6 @@ def updateDataset(datasetid,dataseries):
 
 	print(datetime.datetime.now().time())
 
-
-
 index = 0
 for series in dataseries:
 	for dataset in series['datasets']:
