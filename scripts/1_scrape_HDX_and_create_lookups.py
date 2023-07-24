@@ -2,8 +2,8 @@ import ckanapi, json
 import math
 
 #month suffix
-#update this variable
-monthSuffix = 'test'
+#change this
+monthSuffix = 'jul'
 
 CKAN_URL = "https://data.humdata.org"
 """Base URL for the CKAN instance."""

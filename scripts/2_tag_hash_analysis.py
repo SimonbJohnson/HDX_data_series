@@ -13,8 +13,8 @@ from difflib import SequenceMatcher
 import operator
 
 #month suffix
-#update this variable
-monthSuffix = 'mar'
+#change this variable
+monthSuffix = 'jul'
 
 def substringCounter(names):
 	substring_counts={}

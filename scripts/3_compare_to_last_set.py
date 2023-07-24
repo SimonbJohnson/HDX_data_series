@@ -1,7 +1,9 @@
 import json
 import csv
 
-monthSuffix = 'mar'
+
+#change this variable
+monthSuffix = 'jul'
 
 def createDataSetLookUp(dataseries):
 	datasetLookUp = {}
@@ -48,9 +50,10 @@ def candidateSeriesCSV(dataseriess):
 		output.append(line)
 	return output
 
-lastMonthFile = '../monthly_data_series/data_series_feb.json'
-thisMonthFile = '../working files/data_series_first_cluster_mar.json'
-lookUpFile = '../working files/package_title_lookup_mar.json'
+#change these file references
+lastMonthFile = '../monthly_data_series/data_series_jun.json'
+thisMonthFile = '../working files/data_series_first_cluster_jul.json'
+lookUpFile = '../working files/package_title_lookup_jul.json'
 
 with open(lastMonthFile) as json_file:
 	lastMonth = json.load(json_file)

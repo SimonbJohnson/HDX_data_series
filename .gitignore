@@ -4,3 +4,5 @@ dataseries/*
 *.pyc
 *hdxMetaDataScrape*
 scripts/auth.json
+scripts/auth_blue.json
+scripts/auth_dev.json

@@ -1,13 +1,13 @@
 import csv
 import json
 
-lastFile = '../monthly_data_series/data_series_feb.json'
-targetFile = '../monthly_data_series/data_series_mar.json'
-packageLookupFile = '../working files/package_title_lookup_mar.json'
+#change these
+lastFile = '../monthly_data_series/data_series_jun.json'
+targetFile = '../monthly_data_series/data_series_jul.json'
+packageLookupFile = '../working files/package_title_lookup_jul.json'
 
-changeFiles = ['mar/March Data Series - cods.csv','mar/March Data Series - matchedtomany.csv','mar/March Data Series - matchedtoone.csv']
-newFiles = ['mar/March Data Series - new0.csv','mar/March Data Series - new2.csv','mar/March Data Series - new3.csv','mar/March Data Series - new4.csv','mar/March Data Series - new5.csv','mar/March Data Series - new6.csv','mar/March Data Series - new7.csv','mar/March Data Series - new8.csv','mar/March Data Series - new10.csv','mar/March Data Series - new11.csv','mar/March Data Series - new12.csv','mar/March Data Series - new13.csv']
-clean = []
+changeFiles = ['jul/Data series July 2023 update - match to many.csv','jul/Data series July 2023 update - match to one.csv']
+newFiles = ['jul/Data series July 2023 update - new2.csv']
 
 def getDataseriesIndex(seriesID):
 	index = -1

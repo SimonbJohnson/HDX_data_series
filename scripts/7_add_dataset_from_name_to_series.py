@@ -18,18 +18,18 @@ def prepLookUp(oldLookup):
 
 	return newLookup
 
-dataseriesFile = '../monthly_data_series/data_series_mar.json'
+dataseriesFile = '../monthly_data_series/data_series_apr_pre_additions.json'
 dataseries = []
 with open(dataseriesFile) as json_file:
 	dataseries = json.load(json_file)
 
-lookupFile = '../working files/package_title_lookup_mar.json'
+lookupFile = '../working files/package_title_lookup_apr.json'
 with open(lookupFile) as json_file:
 	lookup = json.load(json_file)
 
 lookup = prepLookUp(lookup)
 
-with open('old/datasets_to_add.csv', 'r') as csvfile:
+with open('old/datasets_to_add_apr.csv', 'r') as csvfile:
 	reader = csv.reader(csvfile)
 	next(reader)
 	for row in reader:
@@ -44,6 +44,6 @@ with open('old/datasets_to_add.csv', 'r') as csvfile:
 			print('Data series not found')
 
 print(dataseries)
-with open('../monthly_data_series/data_series_mar_additions.json', 'w', encoding='utf-8') as f:
+with open('../monthly_data_series/data_series_apr.json', 'w', encoding='utf-8') as f:
     json.dump(dataseries, f, ensure_ascii=False, indent=4)
 

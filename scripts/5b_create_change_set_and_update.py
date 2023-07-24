@@ -11,7 +11,7 @@ def updateDataset(datasetid,dataseries):
 	data = json.dumps(d)
 	data = data.encode()
 
-	req = Request('https://blue.demo.data-humdata-org.ahconu.org/api/action/hdx_dataseries_link')
+	req = Request('https://data.humdata.org/api/action/hdx_dataseries_link')
 
 	req.add_header('Content-Type', 'application/json')
 	req.add_header('Authorization', authVar['authtoken'])
@@ -31,7 +31,7 @@ def removeDataset(datasetid,dataseries):
 	data = json.dumps(d)
 	data = data.encode()
 
-	req = Request('https://blue.demo.data-humdata-org.ahconu.org/api/action/hdx_dataseries_unlink')
+	req = Request('https://data.humdata.org/api/action/hdx_dataseries_unlink')
 
 	req.add_header('Content-Type', 'application/json')
 	req.add_header('Authorization', authVar['authtoken'])
@@ -48,7 +48,7 @@ def removeDataset(datasetid,dataseries):
 
 def downloadCurrentState():
 
-	CKAN_URL = "https://blue.demo.data-humdata-org.ahconu.org/"
+	CKAN_URL = "https://data.humdata.org/"
 	"""Base URL for the CKAN instance."""
 
 	def find_datasets(start, rows):
@@ -84,7 +84,7 @@ def createLookUpFile(packages):
 	return output2
 
 
-targetFile = '../monthly_data_series/data_series_nov.json'
+targetFile = '../monthly_data_series/data_series_jul.json'
 
 with open(targetFile) as json_file:
 	dataseries = json.load(json_file)
@@ -95,7 +95,7 @@ with open('auth.json') as json_file:
 
 print(authVar['authtoken'])
 
-#downloadCurrentState()
+downloadCurrentState()
 
 with open('../working files/hdxMetaDataScrape_dataseries.json', 'r') as file:
 	packages = json.load(file)
@@ -119,7 +119,10 @@ for series in dataseries:
 			else:
 				print('Updating series')
 				print(datetime.datetime.now().time())
-				updateDataset(dataset['id'],series['series'])
+				try:
+					updateDataset(dataset['id'],series['series'])
+				except:
+					print('404 in updating')
 			
 		index = index+1
 

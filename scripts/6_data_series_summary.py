@@ -5,9 +5,9 @@ import math
 import csv
 from urllib.request import Request, urlopen
 
-targetFile = '../monthly_data_series/data_series_feb.json'
+targetFile = '../monthly_data_series/data_series_jul.json'
 
-url = 'https://blue.demo.data-humdata-org.ahconu.org/dataset?dataseries_name='
+url = 'https://data.humdata.org/dataset?dataseries_name='
 
 with open(targetFile) as json_file:
 	dataseries = json.load(json_file)
@@ -21,6 +21,6 @@ for series in dataseries:
 		output.append(row)
 
 
-with open("../dataseries_summary_feb.csv", "w") as f:
+with open("../dataseries_summary_jun.csv", "w") as f:
     writer = csv.writer(f)
     writer.writerows(output)
