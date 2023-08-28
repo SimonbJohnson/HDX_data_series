@@ -3,7 +3,7 @@ import math
 
 #month suffix
 #change this
-monthSuffix = 'jul'
+monthSuffix = 'aug'
 
 CKAN_URL = "https://data.humdata.org"
 """Base URL for the CKAN instance."""

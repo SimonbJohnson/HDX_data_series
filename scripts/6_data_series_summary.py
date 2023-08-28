@@ -21,6 +21,6 @@ for series in dataseries:
 		output.append(row)
 
 
-with open("../dataseries_summary_jun.csv", "w") as f:
+with open("../dataseries_summary_jul.csv", "w") as f:
     writer = csv.writer(f)
     writer.writerows(output)

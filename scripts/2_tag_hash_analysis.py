@@ -14,7 +14,7 @@ import operator
 
 #month suffix
 #change this variable
-monthSuffix = 'jul'
+monthSuffix = 'aug'
 
 def substringCounter(names):
 	substring_counts={}
