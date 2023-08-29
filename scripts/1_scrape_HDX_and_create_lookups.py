@@ -1,9 +1,36 @@
 import ckanapi, json
 import math
+import datetime
+from datetime import datetime
 
-#month suffix
-#change this
-monthSuffix = 'aug'
+#file prefix
+
+month = datetime.now().month
+year = datetime.now().year
+
+monthPrefix = 'test_'+str(year)[2:4]+'-'+str(month).zfill(2)+'-'
+
+
+def reduceMetaData(packages):
+    output = []
+    for package in packages:
+        data = {}
+        data['tags'] = []
+        for tag in package['tags']:
+            data['tags'].append(tag['display_name'])
+        if 'cod_level' in package:
+            data['cod_level'] = package['cod_level']
+        if 'batch' in package:
+            data['batch'] = package['batch']
+        data['organization'] = {}
+        data['organization']['title'] =  package['organization']['title']
+        data['id'] = package['id']
+        data['title'] = package['title']
+        if 'dataseries_name' in package:
+            data['dataseries_name'] = package['dataseries_name']
+        output.append(data)
+    return output
+
 
 CKAN_URL = "https://data.humdata.org"
 """Base URL for the CKAN instance."""
@@ -27,15 +54,15 @@ for i in range(0, loops):
     print(i)
     result = find_datasets(1000*i, 1000)
     packages = result["results"]
-    print(packages)
     output  = output + packages
-with open('../working files/hdxMetaDataScrape_'+monthSuffix+'.json', 'w') as file:
-    json.dump(output, file)
 
+output = reduceMetaData(output)
+with open('../process_files/hdxMetaDataScrape.json', 'w') as file:
+    json.dump(output, file)
 
 output2 = {}
 for package in output:
     output2[package['id']] = package['title']
 
-with open('../working files/package_title_lookup_'+monthSuffix+'.json', 'w', encoding='utf-8') as f:
+with open('../process_files/package_title_lookup/'+monthPrefix+'package_title_lookup_.json', 'w', encoding='utf-8') as f:
     json.dump(output2, f, ensure_ascii=False, indent=4)
