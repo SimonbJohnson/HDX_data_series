@@ -2,6 +2,9 @@ import json
 import csv
 from datetime import datetime
 from pathlib import Path
+from oauth2client.service_account import ServiceAccountCredentials
+from googleapiclient.discovery import build
+import gspread
 
 
 #file prefix
@@ -56,6 +59,79 @@ def candidateSeriesCSV(dataseriess):
 		line = ['','',seriesTitles,seriesTypes,dataseries['org'],counts,matches,unmatched]+unmatchedNames
 		output.append(line)
 	return output
+
+def signInGoogleDrive():
+	credFile = '../keys/credentials.json'
+
+	with open(credFile) as json_file:
+		credentials = json.load(json_file)
+
+	credentials = ServiceAccountCredentials.from_json_keyfile_dict(credentials, scopes=['https://www.googleapis.com/auth/spreadsheets','https://www.googleapis.com/auth/drive'])
+	service = build('drive', 'v3', credentials=credentials)
+	return service
+
+
+def createSpreadsheet(service,title,destFolderId):
+	file_metadata = {
+	    'name': title,
+	    'mimeType': 'application/vnd.google-apps.spreadsheet',
+	    'parents': [destFolderId]
+	}
+
+	file = service.files().create(body=file_metadata,supportsAllDrives=True).execute()
+
+
+def signInGoogleSheets():
+	credFile = '../keys/credentials.json'
+
+	with open(credFile) as json_file:
+		credentials = json.load(json_file)
+
+	gc = gspread.service_account_from_dict(credentials)
+
+	return gc
+
+def numberToLetters(q):
+    """
+    Helper function to convert number of column to its index, like 10 -> 'A'
+    """
+    q = q - 1
+    result = ''
+    while q >= 0:
+        remain = q % 26
+        result = chr(remain+65) + result;
+        q = q//26 - 1
+    return result
+
+def colrow_to_A1(col, row):
+    return numberToLetters(col)+str(row)
+
+
+def update_sheet(ws, rows, left=1, top=1):
+    """
+    updates the google spreadsheet with given table
+    - ws is gspread.models.Worksheet object
+    - rows is a table (list of lists)
+    - left is the number of the first column in the target document (beginning with 1)
+    - top is the number of first row in the target document (beginning with 1)
+    """
+
+    # number of rows and columns
+    num_lines, num_columns = len(rows), len(rows[0])
+
+    # selection of the range that will be updated
+    cell_list = ws.range(
+        colrow_to_A1(left,top)+':'+colrow_to_A1(left+num_columns-1, top+num_lines-1)
+    )
+
+    # modifying the values in the range
+
+    for cell in cell_list:
+        val = rows[cell.row-top][cell.col-left]
+        cell.value = val
+
+    # update in batch
+    ws.update_cells(cell_list)
 
 
 lastMonthFile = '../monthly_data_series/'+ prevMonthPrefix +'data_series.json'
@@ -125,29 +201,43 @@ for candidateSeries in thisMonth:
 
 print('creating spreadsheets')
 
+
+destFolderId = '1vKD6HRabh1QQ52x15zGhW-NZZFzW5vbO'
+title =  monthPrefix+'checks'
+
+service = signInGoogleDrive()
+createSpreadsheet(service,title,destFolderId)
+
+gc = signInGoogleSheets()
+
+sh = gc.open(title)
+
+
 for key in output:
 	if key!='new':
+		title = key
+		worksheet = sh.add_worksheet(title=title, rows=500, cols=20)
 		rows = []
 		rows = candidateSeriesCSV(output[key])
 
-		Path("../process_files/csv_outputs/"+monthPrefix+"/").mkdir(parents=True, exist_ok=True)
+		update_sheet(worksheet,rows)
 
-
-		with open("../process_files/csv_outputs/"+monthPrefix+"/"+monthPrefix+key+".csv", "w") as f:
-		    writer = csv.writer(f)
-		    writer.writerows(rows)
-	else:
-		index = 0
+for key in output:
+	if key=='new':
+		index = 1
 		for candidateSeries in output[key]:
 			title = '|'.join(listOfPropertiesToList(candidateSeries['details'],'name'))
-			candidateOutput = [[candidateSeries['org']]]
+			candidateOutput = [['',''],[candidateSeries['org'],'']]
 			for dataset in candidateSeries['unmatched']:
 				name = titleLookUp[dataset]
 				candidateOutput.append([dataset,name])
-			with open("../process_files/csv_outputs/"+monthPrefix+"/"+monthPrefix+key+"_"+str(index)+".csv", "w") as f:
-			    writer = csv.writer(f)
-			    writer.writerows(candidateOutput)
+			title = 'new_' + str(index)
+			worksheet = sh.add_worksheet(title=title, rows=500, cols=20)
+			update_sheet(worksheet,candidateOutput)
 			index= index+1
+
+
+
 
 
 print('Data series count')

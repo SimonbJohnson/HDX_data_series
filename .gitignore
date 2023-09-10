@@ -8,3 +8,4 @@ scripts/auth_blue.json
 scripts/auth_dev.json
 scripts/check_google_auth.py
 keys/hdx-data-series-ce3de3ecab39.json
+keys/credentials.json
