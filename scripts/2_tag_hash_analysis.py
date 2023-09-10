@@ -11,10 +11,14 @@ import csv
 import Levenshtein
 from difflib import SequenceMatcher
 import operator
+from datetime import datetime
 
-#month suffix
-#change this variable
-monthSuffix = 'aug'
+#file prefix
+
+month = datetime.now().month
+year = datetime.now().year
+
+monthPrefix = 'test_'+str(year)[2:4]+'-'+str(month).zfill(2)+'-'
 
 def substringCounter(names):
 	substring_counts={}
@@ -70,7 +74,7 @@ def regroupOnNameJSON(series):
 		outputseries.append(output[key])
 	return outputseries
 
-packageFile = '../working files/hdxMetaDataScrape_'+ monthSuffix +'.json'
+packageFile = '../process_files/HDXMetaDataScrape/' + monthPrefix + 'hdxMetaDataScrape.json'
 
 print('Loading file')
 with open(packageFile) as json_file:
@@ -81,10 +85,9 @@ output = {};
 
 #group data series based on same tags from the same organisation
 for package in packages:
-	#if package['metadata_created']<'2022-01-01':
 	taglist = []
 	for tag in package['tags']:
-		taglist.append(tag['display_name'])
+		taglist.append(tag)
 	if 'cod_level' in package:
 		taglist.append('common operational dataset - cod')
 		print('This is a cod')
@@ -130,5 +133,5 @@ for key in list(output):
 
 
 #ignore names field as incorrect
-with open('../working files/data_series_first_cluster_'+ monthSuffix+'.json', 'w', encoding='utf-8') as f:
+with open('../process_files/initial_clustering/' + monthPrefix + 'data_series_first_cluster.json', 'w', encoding='utf-8') as f:
 	json.dump(JSONOutput2, f, ensure_ascii=False, indent=4)
