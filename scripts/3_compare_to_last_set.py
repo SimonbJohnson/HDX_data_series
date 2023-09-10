@@ -1,9 +1,16 @@
 import json
 import csv
+from datetime import datetime
+from pathlib import Path
 
 
-#change this variable
-monthSuffix = 'aug'
+#file prefix
+
+month = datetime.now().month
+year = datetime.now().year
+
+monthPrefix = 'test_'+str(year)[2:4]+'-'+str(month).zfill(2)+'-'
+prevMonthPrefix = str(year)[2:4]+'-'+str(month-1).zfill(2)+'-'
 
 def createDataSetLookUp(dataseries):
 	datasetLookUp = {}
@@ -50,10 +57,10 @@ def candidateSeriesCSV(dataseriess):
 		output.append(line)
 	return output
 
-#change these file references
-lastMonthFile = '../monthly_data_series/data_series_jul.json'
-thisMonthFile = '../working files/data_series_first_cluster_aug.json'
-lookUpFile = '../working files/package_title_lookup_aug.json'
+
+lastMonthFile = '../monthly_data_series/'+ prevMonthPrefix +'data_series.json'
+thisMonthFile = '../process_files/initial_clustering/'+ monthPrefix +'data_series_first_cluster.json'
+lookUpFile = '../process_files/package_title_lookup/'+ monthPrefix +'package_title_lookup.json'
 
 with open(lastMonthFile) as json_file:
 	lastMonth = json.load(json_file)
@@ -123,7 +130,10 @@ for key in output:
 		rows = []
 		rows = candidateSeriesCSV(output[key])
 
-		with open("../monthly_data_series/input_files/"+monthSuffix+"/"+key+"_"+monthSuffix+".csv", "w") as f:
+		Path("../process_files/csv_outputs/"+monthPrefix+"/").mkdir(parents=True, exist_ok=True)
+
+
+		with open("../process_files/csv_outputs/"+monthPrefix+"/"+monthPrefix+key+".csv", "w") as f:
 		    writer = csv.writer(f)
 		    writer.writerows(rows)
 	else:
@@ -134,7 +144,7 @@ for key in output:
 			for dataset in candidateSeries['unmatched']:
 				name = titleLookUp[dataset]
 				candidateOutput.append([dataset,name])
-			with open("../monthly_data_series/input_files/"+monthSuffix+"/"+key+"_"+monthSuffix+"_"+str(index)+".csv", "w") as f:
+			with open("../process_files/csv_outputs/"+monthPrefix+"/"+monthPrefix+key+"_"+str(index)+".csv", "w") as f:
 			    writer = csv.writer(f)
 			    writer.writerows(candidateOutput)
 			index= index+1

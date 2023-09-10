@@ -57,12 +57,12 @@ for i in range(0, loops):
     output  = output + packages
 
 output = reduceMetaData(output)
-with open('../process_files/hdxMetaDataScrape.json', 'w') as file:
+with open('../process_files/HDXMetaDataScrape/'+monthPrefix+'hdxMetaDataScrape.json', 'w') as file:
     json.dump(output, file)
 
 output2 = {}
 for package in output:
     output2[package['id']] = package['title']
 
-with open('../process_files/package_title_lookup/'+monthPrefix+'package_title_lookup_.json', 'w', encoding='utf-8') as f:
+with open('../process_files/package_title_lookup/'+monthPrefix+'package_title_lookup.json', 'w', encoding='utf-8') as f:
     json.dump(output2, f, ensure_ascii=False, indent=4)
