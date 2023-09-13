@@ -1,6 +1,7 @@
 name: HDX data series monthly updates
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '42 0 10 * *'
 
