@@ -27,6 +27,8 @@ jobs:
       run: python scripts/2_tag_hash_analysis.py
     - name: Compare to last months and create google sheets for checks
       run: python scripts/3_compare_to_last_set.py
+      env:
+        credentials: ${{ secrets.GOOGLE_AUTH }}
     - uses: stefanzweifel/git-auto-commit-action@v4
       name: Commit updated sources
       with:
