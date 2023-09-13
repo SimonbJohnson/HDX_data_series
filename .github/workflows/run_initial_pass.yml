@@ -2,6 +2,7 @@ name: HDX data series monthly updates
 
 on:
   schedule:
+    - cron: '42 0 10 * *'
 
 jobs:
   build:
