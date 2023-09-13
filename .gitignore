@@ -2,10 +2,12 @@
 *.DS_Store
 dataseries/*
 *.pyc
-*hdxMetaDataScrape*
 scripts/auth.json
 scripts/auth_blue.json
 scripts/auth_dev.json
 scripts/check_google_auth.py
 keys/hdx-data-series-ce3de3ecab39.json
 keys/credentials.json
+process_files/hdxMetaDataScrape_jul.json
+process_files/hdxMetaDataScrape_aug.json
+process_files/hdxMetaDataScrape.json
