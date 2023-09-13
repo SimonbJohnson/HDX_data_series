@@ -80749,27 +80749,6 @@
         "type": "data series"
     },
     {
-        "id": 244,
-        "series": "exclude",
-        "datasets": [],
-        "count": 1,
-        "type": "data series"
-    },
-    {
-        "id": 245,
-        "series": "exclude",
-        "datasets": [],
-        "count": 1,
-        "type": "data series"
-    },
-    {
-        "id": 246,
-        "series": "exclude",
-        "datasets": [],
-        "count": 1,
-        "type": "data series"
-    },
-    {
         "id": 247,
         "series": "Pacific Community -  Population Grids",
         "datasets": [
@@ -80798,13 +80777,6 @@
                 "name": "Vanuatu_Population_Grid_2020"
             }
         ],
-        "count": 1,
-        "type": "data series"
-    },
-    {
-        "id": 248,
-        "series": "exclude",
-        "datasets": [],
         "count": 1,
         "type": "data series"
     },
