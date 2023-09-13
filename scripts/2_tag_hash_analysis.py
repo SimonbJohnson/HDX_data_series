@@ -74,7 +74,7 @@ def regroupOnNameJSON(series):
 		outputseries.append(output[key])
 	return outputseries
 
-packageFile = '../process_files/HDXMetaDataScrape/' + monthPrefix + 'hdxMetaDataScrape.json'
+packageFile = 'process_files/HDXMetaDataScrape/' + monthPrefix + 'hdxMetaDataScrape.json'
 
 print('Loading file')
 with open(packageFile) as json_file:
@@ -133,5 +133,5 @@ for key in list(output):
 
 
 #ignore names field as incorrect
-with open('../process_files/initial_clustering/' + monthPrefix + 'data_series_first_cluster.json', 'w', encoding='utf-8') as f:
+with open('process_files/initial_clustering/' + monthPrefix + 'data_series_first_cluster.json', 'w', encoding='utf-8') as f:
 	json.dump(JSONOutput2, f, ensure_ascii=False, indent=4)
