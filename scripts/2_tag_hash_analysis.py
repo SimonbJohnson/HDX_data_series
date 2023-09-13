@@ -18,7 +18,7 @@ from datetime import datetime
 month = datetime.now().month
 year = datetime.now().year
 
-monthPrefix = 'test_'+str(year)[2:4]+'-'+str(month).zfill(2)+'-'
+monthPrefix = str(year)[2:4]+'-'+str(month).zfill(2)+'-'
 
 def substringCounter(names):
 	substring_counts={}

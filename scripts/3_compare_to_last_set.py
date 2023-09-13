@@ -12,7 +12,7 @@ import os
 month = datetime.now().month
 year = datetime.now().year
 
-monthPrefix = 'test_'+str(year)[2:4]+'-'+str(month).zfill(2)+'-'
+monthPrefix = str(year)[2:4]+'-'+str(month).zfill(2)+'-'
 prevMonthPrefix = str(year)[2:4]+'-'+str(month-1).zfill(2)+'-'
 
 def createDataSetLookUp(dataseries):
@@ -40,7 +40,8 @@ def propertyToList(matches,key):
 def listOfPropertiesToList(dataseries,key):
 	output = []
 	for series in dataseries:
-		output.append(str(series[key]))
+		if key!='none':
+			output.append(str(series[key]))
 	return output
 
 
@@ -218,6 +219,21 @@ gc = signInGoogleSheets()
 
 sh = gc.open(title)
 
+url = 'https://data.humdata.org/dataset?dataseries_name='
+
+outputSummary = [['ID','Data series name','Link']]
+for series in lastMonth:
+	if series['type'] == 'data series':
+		name = series['series']
+		link = url + series['series']
+		row = [series['id'],series['series'],link]
+		outputSummary.append(row)
+
+title = 'Last month summary'
+worksheet = sh.add_worksheet(title=title, rows=1000, cols=20)
+rows = outputSummary
+
+update_sheet(worksheet,rows)
 
 for key in output:
 	if key!='new':
@@ -242,9 +258,13 @@ for key in output:
 			update_sheet(worksheet,candidateOutput)
 			index= index+1
 
+outputClean = [['Data series name','Data set name']]
+	
+title = 'Manual additions to data series'
+worksheet = sh.add_worksheet(title=title, rows=500, cols=20)
+rows = outputClean
 
-
-
+update_sheet(worksheet,outputClean) 
 
 print('Data series count')
 print(summary)
@@ -252,4 +272,3 @@ print('unmatched')
 print(unmatched)
 print('assessment summary')
 print(assessmentSummary)
-
