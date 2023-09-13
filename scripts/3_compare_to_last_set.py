@@ -63,8 +63,8 @@ def candidateSeriesCSV(dataseriess):
 def signInGoogleDrive():
 	if "credentials" in os.environ:
 		credentials = os.environ('credentials')
-    else:
-		credFile = '../keys/credentials.json'
+	else:
+		credFile = 'keys/credentials.json'
 
 		with open(credFile) as json_file:
 			credentials = json.load(json_file)
@@ -87,8 +87,8 @@ def createSpreadsheet(service,title,destFolderId):
 def signInGoogleSheets():
 	if "credentials" in os.environ:
 		credentials = os.environ('credentials')
-    else:
-		credFile = '../keys/credentials.json'
+	else:
+		credFile = 'keys/credentials.json'
 
 		with open(credFile) as json_file:
 			credentials = json.load(json_file)
