@@ -5,7 +5,7 @@ from pathlib import Path
 from oauth2client.service_account import ServiceAccountCredentials
 from googleapiclient.discovery import build
 import gspread
-
+import os
 
 #file prefix
 
@@ -61,10 +61,13 @@ def candidateSeriesCSV(dataseriess):
 	return output
 
 def signInGoogleDrive():
-	credFile = '../keys/credentials.json'
+	if "credentials" in os.environ:
+    	credentials = os.environ('os.environ')
+    else:
+		credFile = '../keys/credentials.json'
 
-	with open(credFile) as json_file:
-		credentials = json.load(json_file)
+		with open(credFile) as json_file:
+			credentials = json.load(json_file)
 
 	credentials = ServiceAccountCredentials.from_json_keyfile_dict(credentials, scopes=['https://www.googleapis.com/auth/spreadsheets','https://www.googleapis.com/auth/drive'])
 	service = build('drive', 'v3', credentials=credentials)
@@ -82,10 +85,13 @@ def createSpreadsheet(service,title,destFolderId):
 
 
 def signInGoogleSheets():
-	credFile = '../keys/credentials.json'
+	if "credentials" in os.environ:
+    	credentials = os.environ('os.environ')
+    else:
+		credFile = '../keys/credentials.json'
 
-	with open(credFile) as json_file:
-		credentials = json.load(json_file)
+		with open(credFile) as json_file:
+			credentials = json.load(json_file)
 
 	gc = gspread.service_account_from_dict(credentials)
 
@@ -134,9 +140,9 @@ def update_sheet(ws, rows, left=1, top=1):
     ws.update_cells(cell_list)
 
 
-lastMonthFile = '../monthly_data_series/'+ prevMonthPrefix +'data_series.json'
-thisMonthFile = '../process_files/initial_clustering/'+ monthPrefix +'data_series_first_cluster.json'
-lookUpFile = '../process_files/package_title_lookup/'+ monthPrefix +'package_title_lookup.json'
+lastMonthFile = 'monthly_data_series/'+ prevMonthPrefix +'data_series.json'
+thisMonthFile = 'process_files/initial_clustering/'+ monthPrefix +'data_series_first_cluster.json'
+lookUpFile = 'process_files/package_title_lookup/'+ monthPrefix +'package_title_lookup.json'
 
 with open(lastMonthFile) as json_file:
 	lastMonth = json.load(json_file)
