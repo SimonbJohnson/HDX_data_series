@@ -124,8 +124,9 @@ def update_sheet(ws, rows, left=1, top=1):
     """
 
     # number of rows and columns
-    num_lines, num_columns = len(rows), len(rows[0])
-
+    num_lines = len(rows)
+    num_columns = max(len(row) for row in rows)
+    print(num_columns)
     # selection of the range that will be updated
     cell_list = ws.range(
         colrow_to_A1(left,top)+':'+colrow_to_A1(left+num_columns-1, top+num_lines-1)
@@ -134,8 +135,11 @@ def update_sheet(ws, rows, left=1, top=1):
     # modifying the values in the range
 
     for cell in cell_list:
-        val = rows[cell.row-top][cell.col-left]
-        cell.value = val
+        try:
+            val = rows[cell.row-top][cell.col-left]
+            cell.value = val
+        except:
+        	cell.value = None
 
     # update in batch
     ws.update_cells(cell_list)
