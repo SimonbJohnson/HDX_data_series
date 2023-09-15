@@ -2,12 +2,12 @@ import csv
 import json
 
 #change these
-lastFile = '../monthly_data_series/data_series_jun.json'
-targetFile = '../monthly_data_series/data_series_jul.json'
-packageLookupFile = '../working files/package_title_lookup_jul.json'
+lastFile = '../monthly_data_series/23-08-data_series_old.json'
+targetFile = '../monthly_data_series/23-08-data_series.json'
+packageLookupFile = '../process_files/package_title_lookup/23-08-package_title_lookup.json'
 
-changeFiles = ['jul/Data series July 2023 update - match to many.csv','jul/Data series July 2023 update - match to one.csv']
-newFiles = ['jul/Data series July 2023 update - new2.csv']
+changeFiles = ['23-08/Aug 2023 - matched_to_more_than_one.csv','23-08/Aug 2023 - matched_to_one.csv']
+newFiles = ['23-08/Aug 2023 - new1.csv','23-08/Aug 2023 - new3.csv']
 
 def getDataseriesIndex(seriesID):
 	index = -1
@@ -41,7 +41,7 @@ with open(packageLookupFile) as json_file:
 
 for file in changeFiles:
 	print(file)
-	with open('../monthly_data_series/input_files/'+file, 'r') as csvfile:
+	with open('../process_files/csv_outputs/'+file, 'r') as csvfile:
 		reader = csv.reader(csvfile)
 		next(reader)
 		for row in reader:
@@ -59,7 +59,7 @@ for file in changeFiles:
 					dataseries[dataseriesIndex]['datasets'].append({'id':dataset,'key':datasetName})
 
 for file in newFiles:
-	with open('../monthly_data_series/input_files/'+file, 'r') as csvfile:
+	with open('../process_files/csv_outputs/'+file, 'r') as csvfile:
 		reader = csv.reader(csvfile)
 		currentID = highestDataseriesID(dataseries)
 		currentID = currentID + 1

@@ -5,34 +5,6 @@
         "row": 2,
         "datasets": [
             {
-                "id": "f2ea5d82-1b04-4d36-8e94-a73a2eed099d",
-                "key": "Earth Tectonic Plates"
-            },
-            {
-                "id": "5a2176bb-a4dd-44af-b44f-504d26fdcf19",
-                "key": "Türkiye Earthquake magnitudes"
-            },
-            {
-                "id": "50d93259-2d49-4f84-85e6-3cd0aa03dfaa",
-                "key": "ShakeMap Data for the Earthquakes in Southeastern Türkiye and Northwestern Syria"
-            },
-            {
-                "id": "fc2a6d91-fb07-403e-b867-5942e5810f21",
-                "key": "Nepal Earthquake Shake Map May 12th 2015"
-            },
-            {
-                "id": "5015c7d2-f74a-472e-887e-3698910c2729",
-                "key": "Nepal Earthquake Shake Map April 25th 2015"
-            },
-            {
-                "id": "dc951656-3dd0-4896-a050-2c4f23cd0f86",
-                "key": "GDACS Live Mapping Coordination System"
-            },
-            {
-                "id": "95982e94-8567-491c-bee5-33e562f4897a",
-                "key": "Nepal Government Geo-Portal"
-            },
-            {
                 "id": "361f98d4-c1bb-496d-ab86-a6c3f40a6170",
                 "name": "Common Operational Datasets for Humanitarian and Development v2.3: Philippines"
             },
@@ -167,6 +139,10 @@
             {
                 "id": "7656e446-9116-4146-aaa8-5a038c8b1797",
                 "name": "Syrian Arab Republic - Participatory Assessment for Refugees, 2021"
+            },
+            {
+                "id": "487e5bad-7069-4e5a-b4c4-4c802843fcc2",
+                "name": "Serbia - Post-Distribution Monitoring of Cash-Based Interventions, July 2020"
             },
             {
                 "id": "a49f7d96-d357-45e0-bae3-b845f6a0e772",
@@ -1247,42 +1223,6 @@
             {
                 "id": "af5dee92-be5e-4d02-bbcf-37b44e4025fb",
                 "key": "Sudan Administative line boundaries 2"
-            },
-            {
-                "id": "571c6518-3521-47fe-a9c2-2b4eefabfa9a",
-                "key": "Assessment of Flooded Buildings in Bandarban, Cox's Bazaar, Chattogram, and Rangamati Districts, Chattogram Division, Bangladesh as of  12 to 22 August 2023"
-            },
-            {
-                "id": "fed881c1-c95d-4b2b-930b-8c8728a719c4",
-                "key": "Satellite detected water extents between 11 and 15 August 2023 over South Sudan"
-            },
-            {
-                "id": "3fbf40cb-5c56-4d26-9dd9-d9cda93a8d20",
-                "key": "Satellittoppdaget overflatevann langs med Gudbrandsdalslågen, Ringebu, Sør-Fron og Nord-Fron Kommune, Innlandet Fylke, Norge"
-            },
-            {
-                "id": "be12161c-b3cd-49ed-9793-61bc029a8602",
-                "key": "Satellite detected water extent over Ringerike Municipality, Viken County, Norway as of 12 August 2023"
-            },
-            {
-                "id": "5671a408-200b-4311-b40f-6c6febf3f72b",
-                "key": "Floods in Norway, August 2023 - UNOSAT Live Web Map"
-            },
-            {
-                "id": "0233d232-6122-4daf-93de-2b824c1f37e0",
-                "key": "Satellite detected water extent over Khammouan & Savannakhet Provinces, Lao PDR as of 04 August 2023"
-            },
-            {
-                "id": "d1045c60-25d4-4afd-8b3b-4a34162e94e0",
-                "key": "Satellite detected water extents between 26 and 30 July 2023 over Pakistan"
-            },
-            {
-                "id": "058d5ae3-484c-4bd6-bd10-474d7a96928a",
-                "key": "Landslide impact analysis in Oni District, Racha-Lechkhumi and Kvemo Svaneti Region, Georgia as of 06 August 2023"
-            },
-            {
-                "id": "a8178e04-ce55-4bbf-9932-f2e41b8994ac",
-                "key": "Ushahidi Handwashing Station Data in Indonesia"
             }
         ],
         "count": 0,
@@ -4618,18 +4558,6 @@
             {
                 "id": "e86144fb-8f79-42c9-b59f-926817b1b1ee",
                 "key": "Humanitarian Response Plan projects for Slovakia"
-            },
-            {
-                "id": "6e7e0458-e6ae-44a6-9707-27b077e2c67f",
-                "key": "Humanitarian Response Plan projects for Lithuania"
-            },
-            {
-                "id": "f1d69fdd-37f1-4aa6-a7c9-07aa7d2fb4ff",
-                "key": "Humanitarian Response Plan projects for Paraguay"
-            },
-            {
-                "id": "9e1047d6-8255-4385-9ab2-ada1b8c59e67",
-                "key": "Humanitarian Response Plan projects for Mexico"
             }
         ],
         "count": 48,
@@ -54194,38 +54122,6 @@
             {
                 "id": "4b061712-88fe-4eab-a147-9c70a1cf023e",
                 "name": "Wildfires in Al-Haffa and Al-Qardaha Districts, Lattakia Governorate, Syria"
-            },
-            {
-                "id": "fce07886-3d70-4933-85f0-e0a34fbb11a5",
-                "key": "Damage assessment over Ras Rajel, Tabarka delegation, Jendouba Governorate, Tunisia as of 27 July 2023"
-            },
-            {
-                "id": "22183206-95eb-48a5-88b7-69f272cee57d",
-                "key": "Zones incendiées le 27 juillet 2023 dans les communes de Melbou et Ziama Mansouria, Wilayas de Bejaia et Jijel, Algérie"
-            },
-            {
-                "id": "7970d8c4-c244-4467-b7c9-00504066a731",
-                "key": "Wildfires in Tabarka delegation, Jendouba Governorate and El Krib delegation, Siliana Governorate as of 27 July 2023"
-            },
-            {
-                "id": "04e8bb91-5304-4dcc-ae74-a976a81ce1e1",
-                "key": "Densité des foyers d'incendie dans les délégations de Nefza, Ain Draham et Tabarka, Gouvernorat de Jendouba le 25 juillet 2023"
-            },
-            {
-                "id": "8d852723-81f5-48fc-a940-e74e103094fd",
-                "key": "Zones incendiées le 25 juillet 2023 dans la Wilaya de Bejaia, Algérie"
-            },
-            {
-                "id": "a32b9cfe-2328-473f-97a1-902856e087d1",
-                "key": "Zones incendiées le 25 juillet 2023 dans les communes de Melbou et Ziama Mansouria, Wilayas de Bejaia et Jijel, Algérie"
-            },
-            {
-                "id": "0f06d1d1-8d9e-4f33-aa7f-7a981cfdd011",
-                "key": "Densité des foyers d'incendies dans les wilayas de Bouira, Tizi Ouzou et Bejaia le 24 juillet 2023"
-            },
-            {
-                "id": "3096b00b-be4c-4fdf-9c65-020a37cedec4",
-                "key": "Fire in Algeria - UNOSAT Live Web Map"
             }
         ],
         "count": 12,
@@ -57499,10 +57395,6 @@
             {
                 "id": "70d13a43-9601-4fe9-b166-ef88a268e7e0",
                 "key": "Lebanon - Vulnerability Assessment of Syrian Refugees in Lebanon, 2022"
-            },
-            {
-                "id": "06ec8169-4639-487e-add0-44f497f1b0cd",
-                "key": "Lebanon - Vulnerability Assessment of Syrian Refugees: Socio-Economic Score - 2020"
             }
         ],
         "count": 11,
@@ -59608,10 +59500,6 @@
             {
                 "id": "b488490f-2121-465e-9c10-e7bf1ddfb06c",
                 "key": "Nepal - Post-Distribution Monitoring of Cash-Based Interventions 2022"
-            },
-            {
-                "id": "487e5bad-7069-4e5a-b4c4-4c802843fcc2",
-                "name": "Serbia - Post-Distribution Monitoring of Cash-Based Interventions, July 2020"
             }
         ],
         "count": 22,
@@ -69614,14 +69502,6 @@
             {
                 "id": "495bf9ef-afab-41ac-a804-ca5978aa4213",
                 "name": "Afghanistan - National Demographic and Health Data"
-            },
-            {
-                "id": "63865c94-4a9b-4413-bed4-e15b7aa9e2c1",
-                "key": "Türkiye - Subnational Demographic and Health Data"
-            },
-            {
-                "id": "5ce93501-e887-41a2-8fb0-a008ecb7c7c9",
-                "key": "Türkiye - National Demographic and Health Data"
             }
         ],
         "count": 171,
@@ -83153,93 +83033,6 @@
             }
         ],
         "count": 1,
-        "type": "data series"
-    },
-    {
-        "id": 280,
-        "series": "Water Point Data Exchange - Country Data",
-        "datasets": [
-            {
-                "id": "c7c8d215-67cf-487b-8913-681f33fc193b",
-                "key": "Water Point Data Exchange (HTI)"
-            },
-            {
-                "id": "da8746b6-5149-4a67-b5f9-4511dfd6a7ed",
-                "key": "Water Point Data Exchange (ETH)"
-            },
-            {
-                "id": "6577e7d0-6e2a-4bba-87fa-4e8989118597",
-                "key": "Water Point Data Exchange (SWZ)"
-            },
-            {
-                "id": "2155674c-a237-400d-af2d-9a5529abb92c",
-                "key": "Water Point Data Exchange (BGD)"
-            },
-            {
-                "id": "9f5813fb-eb5b-4bdb-ae0a-f48cdb55117e",
-                "key": "Water Point Data Exchange (ZMB)"
-            },
-            {
-                "id": "6fe1a228-bcf6-4e69-8f0e-a9b869f6f32d",
-                "key": "Water Point Data Exchange (GTM)"
-            },
-            {
-                "id": "cf0b9e6f-7b2c-461c-b629-02add54b480b",
-                "key": "Water Point Data Exchange (SSD)"
-            },
-            {
-                "id": "c8cef888-53dd-48dc-ad51-ef30428b0f44",
-                "key": "Water Point Data Exchange (LBR)"
-            },
-            {
-                "id": "4c5e7cd0-3d28-4827-888c-e58e80b2eb47",
-                "key": "Water Point Data Exchange (MWI)"
-            },
-            {
-                "id": "29677a2d-1fb2-48a3-a06a-9c66800c418b",
-                "key": "Water Point Data Exchange (NGA)"
-            },
-            {
-                "id": "daae5188-d065-4bac-90af-a90bb16b7d7c",
-                "key": "Water Point Data Exchange (SLE)"
-            },
-            {
-                "id": "84e7bec3-38c1-474d-84e1-eabbbc380f22",
-                "key": "Water Point Data Exchange (CAF)"
-            },
-            {
-                "id": "efd21fab-2b22-4328-a30d-ee6ac3a09795",
-                "key": "Water Point Data Exchange (UGA)"
-            },
-            {
-                "id": "be496f2a-db8e-44eb-bd96-851e69771c63",
-                "key": "Water Point Data Exchange (RWA)"
-            },
-            {
-                "id": "dd154b0d-8d0e-421e-8254-e37e38348167",
-                "key": "Water Point Data Exchange (TZA)"
-            },
-            {
-                "id": "3960e24c-fe2a-430a-b70c-ee72c38dd88c",
-                "key": "Water Point Data Exchange (ZWE)"
-            },
-            {
-                "id": "35a11b99-3b89-462e-b62c-89aac6142198",
-                "key": "Water Point Data Exchange (GHA)"
-            },
-            {
-                "id": "b5744fa0-9312-417f-bcaf-9c75bac95933",
-                "key": "Water Point Data Exchange (KEN)"
-            }
-        ],
-        "count": 2,
-        "type": "data series"
-    },
-    {
-        "id": 281,
-        "series": "exclude",
-        "datasets": [],
-        "count": 2,
         "type": "data series"
     }
 ]
