@@ -83,18 +83,18 @@ def createLookUpFile(packages):
 	return output2
 
 
-targetFile = 'monthly_data_series/23-08-data_series.json'
+targetFile = 'monthly_data_series/23-09-data_series.json'
 
 with open(targetFile) as json_file:
 	dataseries = json.load(json_file)
 
-with open('scripts/auth.json') as json_file:
+with open('keys/auth.json') as json_file:
 	authVar =  json.load(json_file)
 
 
 print(authVar['authtoken'])
 
-#downloadCurrentState()
+downloadCurrentState()
 
 with open('process_files/hdxMetaDataScrape_dataseries.json', 'r') as file:
 	packages = json.load(file)
