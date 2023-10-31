@@ -83,7 +83,7 @@ def createLookUpFile(packages):
 	return output2
 
 
-targetFile = 'monthly_data_series/23-09-data_series.json'
+targetFile = 'monthly_data_series/23-10-data_series.json'
 
 with open(targetFile) as json_file:
 	dataseries = json.load(json_file)
@@ -94,20 +94,20 @@ with open('keys/auth.json') as json_file:
 
 print(authVar['authtoken'])
 
-downloadCurrentState()
+#downloadCurrentState()
 
 with open('process_files/hdxMetaDataScrape_dataseries.json', 'r') as file:
 	packages = json.load(file)
 
 lookUp = createLookUpFile(packages)
 
-index = 0
+index =0
 
 
 ## data series to be added/changed
 for series in dataseries:
 	for dataset in series['datasets']:
-		if index>-1 and series['type']=='excluded':
+		if index>20375 and series['type']=='excluded':
 			print(index)
 			if dataset['id'] in lookUp: 
 				oldSeries = lookUp[dataset['id']]
@@ -115,7 +115,7 @@ for series in dataseries:
 					print('removing dataset')
 					print(dataset)
 					removeDataset(dataset['id'],None)
-		if index>-1 and series['type']=='data series':
+		if index>20375 and series['type']=='data series':
 			print(index)
 			if dataset['id'] in lookUp: 
 				oldSeries = lookUp[dataset['id']]
