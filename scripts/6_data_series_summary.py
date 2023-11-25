@@ -5,7 +5,7 @@ import math
 import csv
 from urllib.request import Request, urlopen
 
-targetFile = '../monthly_data_series/23-10-data_series.json'
+targetFile = '../monthly_data_series/23-11-data_series.json'
 
 url = 'https://data.humdata.org/dataset?dataseries_name='
 
@@ -21,6 +21,6 @@ for series in dataseries:
 		output.append(row)
 
 
-with open("../23-10-dataseries_summary.csv", "w") as f:
+with open("../23-11-dataseries_summary.csv", "w") as f:
     writer = csv.writer(f)
     writer.writerows(output)

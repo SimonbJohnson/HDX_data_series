@@ -2,12 +2,12 @@ import csv
 import json
 
 #change these
-lastFile = '../monthly_data_series/23-09-data_series.json'
-targetFile = '../monthly_data_series/23-10-data_series.json'
-packageLookupFile = '../process_files/package_title_lookup/23-10-package_title_lookup.json'
+lastFile = '../monthly_data_series/23-10-data_series.json'
+targetFile = '../monthly_data_series/23-11-data_series.json'
+packageLookupFile = '../process_files/package_title_lookup/23-11-package_title_lookup.json'
 
-changeFiles = ['23-10/23-10-checks - cods.csv','23-10/23-10-checks - matchedToMany.csv','23-10/23-10-checks - matchedToOne.csv']
-newFiles = []
+changeFiles = ['23-11/23-11-checks - cods.csv','23-11/23-11-checks - matchedToMany.csv','23-11/23-11-checks - matchedToOne.csv']
+newFiles = ['23-11/23-11-checks - new_1.csv','23-11/23-11-checks - new_2.csv']
 
 def getDataseriesIndex(seriesID):
 	index = -1
