@@ -13,7 +13,11 @@ month = datetime.now().month
 year = datetime.now().year
 
 monthPrefix = str(year)[2:4]+'-'+str(month).zfill(2)+'-'
-prevMonthPrefix = str(year)[2:4]+'-'+str(month-1).zfill(2)+'-'
+prevMonth = month-1
+if prevMonth == 0:
+	prevMonth = 12
+	prevYear = year-1
+prevMonthPrefix = str(prevYear)[2:4]+'-'+str(prevMonth-1).zfill(2)+'-'
 
 def createDataSetLookUp(dataseries):
 	datasetLookUp = {}
