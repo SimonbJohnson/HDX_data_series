@@ -83,7 +83,7 @@ def createLookUpFile(packages):
 	return output2
 
 
-targetFile = '../monthly_data_series/23-12-data_series.json'
+targetFile = '../monthly_data_series/24-01-data_series.json'
 
 with open(targetFile) as json_file:
 	dataseries = json.load(json_file)
