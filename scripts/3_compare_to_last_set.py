@@ -14,6 +14,7 @@ year = datetime.now().year
 
 monthPrefix = str(year)[2:4]+'-'+str(month).zfill(2)+'-'
 prevMonth = month-1
+prevYear = year
 if prevMonth == 0:
 	prevMonth = 12
 	prevYear = year-1
