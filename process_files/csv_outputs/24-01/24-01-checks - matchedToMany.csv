@@ -1,0 +1,3 @@
+Action,Notes,title,key,Org,count,Data series ID,Dataset IDs,Dataset Names,,
+INCLUDE,,HOTOSM - Buildings|Excluded datasets from clustering,data series|excluded,Humanitarian OpenStreetMap Team (HOT)|Humanitarian OpenStreetMap Team (HOT),378|0,14,be73f157-9a79-430c-931a-9c25418f7448|8106b0df-73a3-46a3-bda1-9d648c6a5ae7|7e6cdcfe-1a53-4856-a984-bc0106bab805,Italy Buildings (OpenStreetMap Export),Mali Buildings (OpenStreetMap Export),Mali Sea Ports (OpenStreetMap Export)
+just note that the Mali Sea Ports is not part of this series. ,,,,,,,,,,
