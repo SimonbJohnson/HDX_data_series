@@ -8,8 +8,8 @@ from pathlib import Path
 
 #file prefix
 
-#month = datetime.now().month
-#year = datetime.now().year
+month = datetime.now().month
+year = datetime.now().year
 
 monthPrefix = str(year)[2:4]+'-'+str(month).zfill(2)+'-'
 prevMonth = month-1
@@ -118,7 +118,7 @@ for file in changeFiles:
 					dataseries[dataseriesIndex]['datasets'].append({'id':dataset,'key':datasetName})
 
 for file in newFiles:
-	with open('../process_files/csv_outputs/'+file, 'r') as csvfile:
+	with open(file, 'r') as csvfile:
 		reader = csv.reader(csvfile)
 		currentID = highestDataseriesID(dataseries)
 		currentID = currentID + 1
