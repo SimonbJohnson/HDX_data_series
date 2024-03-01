@@ -13,7 +13,12 @@ month = datetime.now().month
 year = datetime.now().year
 
 monthPrefix = str(year)[2:4]+'-'+str(month).zfill(2)+'-'
-prevMonthPrefix = str(year)[2:4]+'-'+str(month-1).zfill(2)+'-'
+prevMonth = month-1
+prevYear = year
+if prevMonth == 0:
+	prevMonth = 12
+	prevYear = year-1
+prevMonthPrefix = str(prevYear)[2:4]+'-'+str(prevMonth).zfill(2)+'-'
 
 def createDataSetLookUp(dataseries):
 	datasetLookUp = {}
@@ -46,12 +51,12 @@ def listOfPropertiesToList(dataseries,key):
 
 
 def candidateSeriesCSV(dataseriess):
-	output = [['Action','Notes','title','key','Org','count','Matches','Unmatched','Names']]
+	output = [['Action','Notes','title','key','Org','count','Data series ID','Dataset IDs','Dataset Names']]
 	
 	for dataseries in dataseriess:
 		unmatchedNames = []
 		for dataset in dataseries['unmatched']:
-			unmatchedNames.append(titleLookUp[dataset])
+			unmatchedNames.append('=HYPERLINK("https://data.humdata.org/dataset/'+dataset+'","'+titleLookUp[dataset]+'")')
 		seriesTitles = '|'.join(listOfPropertiesToList(dataseries['details'],'name'))
 		seriesTypes = '|'.join(listOfPropertiesToList(dataseries['details'],'type'))
 		counts = '|'.join(listOfPropertiesToList(dataseries['details'],'count'))
@@ -142,12 +147,17 @@ def update_sheet(ws, rows, left=1, top=1):
         	cell.value = None
 
     # update in batch
-    ws.update_cells(cell_list)
+    ws.update_cells(cell_list,value_input_option='USER_ENTERED')
 
 
 lastMonthFile = 'monthly_data_series/'+ prevMonthPrefix +'data_series.json'
 thisMonthFile = 'process_files/initial_clustering/'+ monthPrefix +'data_series_first_cluster.json'
 lookUpFile = 'process_files/package_title_lookup/'+ monthPrefix +'package_title_lookup.json'
+
+files = os.listdir('monthly_data_series/')
+
+for file in files:
+	print(file)
 
 with open(lastMonthFile) as json_file:
 	lastMonth = json.load(json_file)

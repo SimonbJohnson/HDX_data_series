@@ -1,13 +1,30 @@
 import csv
 import json
+from datetime import datetime
+import gspread
+import os
+from pathlib import Path
+
+
+#file prefix
+
+month = datetime.now().month
+year = datetime.now().year
+
+monthPrefix = str(year)[2:4]+'-'+str(month).zfill(2)+'-'
+prevMonth = month-1
+prevYear = year
+if prevMonth == 0:
+	prevMonth = 12
+	prevYear = year-1
+prevMonthPrefix = str(prevYear)[2:4]+'-'+str(prevMonth).zfill(2)+'-'
+
 
 #change these
-lastFile = '../monthly_data_series/23-08-data_series_old.json'
-targetFile = '../monthly_data_series/23-08-data_series.json'
-packageLookupFile = '../process_files/package_title_lookup/23-08-package_title_lookup.json'
+lastFile = f'monthly_data_series/{prevMonthPrefix}data_series.json'
+targetFile = f'monthly_data_series/{monthPrefix}data_series.json'
+packageLookupFile = f'process_files/package_title_lookup/{monthPrefix}package_title_lookup.json'
 
-changeFiles = ['23-08/Aug 2023 - matched_to_more_than_one.csv','23-08/Aug 2023 - matched_to_one.csv']
-newFiles = ['23-08/Aug 2023 - new1.csv','23-08/Aug 2023 - new3.csv']
 
 def getDataseriesIndex(seriesID):
 	index = -1
@@ -33,6 +50,48 @@ def highestDataseriesID(dataseries):
 			maxID = int(series['id'])
 	return maxID
 
+def signInGoogleSheets():
+	if "credentials" in os.environ:
+		credentials = json.loads(os.environ['credentials'])
+	else:
+		credFile = 'keys/credentials.json'
+
+		with open(credFile) as json_file:
+			credentials = json.load(json_file)
+
+	gc = gspread.service_account_from_dict(credentials)
+
+	return gc
+
+def downloadGoogleSheets():
+	title =  monthPrefix+'checks'
+	gc = signInGoogleSheets()
+	sh = gc.open(title)
+
+	sheets = sh.worksheets()
+
+	changeFiles = []
+	newFiles = []
+	fileDir = f'process_files/csv_outputs/{monthPrefix[:-1]}/'
+	print(fileDir)
+	for sheet in sheets:
+		Path(fileDir).mkdir(parents=False, exist_ok=True)
+		fileName = monthPrefix+'checks - '+sheet.title+'.csv'
+		if 'matchedToOne' in sheet.title:
+			changeFiles.append(fileDir+fileName)
+		if 'matchedToMany' in sheet.title:
+			changeFiles.append(fileDir+fileName)
+		if 'cods' in sheet.title:
+			changeFiles.append(fileDir+fileName)
+		if 'new' in sheet.title:
+			newFiles.append(fileDir+fileName)
+		with open(fileDir+fileName, 'w') as f:
+		    writer = csv.writer(f)
+		    writer.writerows(sheet.get_all_values())
+	return [changeFiles,newFiles]
+
+[changeFiles,newFiles] = downloadGoogleSheets()
+
 with open(lastFile) as json_file:
 	dataseries = json.load(json_file)
 
@@ -41,7 +100,7 @@ with open(packageLookupFile) as json_file:
 
 for file in changeFiles:
 	print(file)
-	with open('../process_files/csv_outputs/'+file, 'r') as csvfile:
+	with open(file, 'r') as csvfile:
 		reader = csv.reader(csvfile)
 		next(reader)
 		for row in reader:
@@ -59,7 +118,7 @@ for file in changeFiles:
 					dataseries[dataseriesIndex]['datasets'].append({'id':dataset,'key':datasetName})
 
 for file in newFiles:
-	with open('../process_files/csv_outputs/'+file, 'r') as csvfile:
+	with open(file, 'r') as csvfile:
 		reader = csv.reader(csvfile)
 		currentID = highestDataseriesID(dataseries)
 		currentID = currentID + 1
